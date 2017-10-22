@@ -13,6 +13,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     let networkingInstance = LogInNetworkingLayer()
+    let alertInstance = Alert()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,9 +28,14 @@ class LogInViewController: UIViewController {
         let user = User(email: emailTextField.text!, password: passwordTextField.text!)
         networkingInstance.network(route: Route.users(), user: user, requestRoute: .get) { (data, responseInt) in
             if responseInt == 200 {
-                print("The user was succesfully logged in")}
+                print("The user was succesfully logged in")
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "showUsers", sender: nil)
+                }
+            }
             else {
                 print("The user can not be logged in")
+                alertInstance.logInAlert(controller: self)
             }
         }
     }
