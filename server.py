@@ -76,7 +76,6 @@ class User(Resource):
         # Essentially we need the credentials they are passing in the headers
 
         # Now we need to find the user in the database
-        # pdb.set_trace()
         user_find = orchard_collection.find_one({'email': auth.username})
 
         # Now we esentially implement the error handling

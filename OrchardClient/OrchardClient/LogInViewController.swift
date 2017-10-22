@@ -9,10 +9,10 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-    //    MARK: UIElements
+    //MARK: UIElements
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
+    let networkingInstance = LogInNetworkingLayer()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,8 +24,13 @@ class LogInViewController: UIViewController {
     }
 
     @IBAction func logInButton(_ sender: Any) {
-        
+        let user = User(email: emailTextField.text!, password: passwordTextField.text!)
+        networkingInstance.network(route: Route.users(), user: user, requestRoute: .get) { (data, responseInt) in
+            if responseInt == 200 {
+                print("The user was succesfully logged in")}
+            else {
+                print("The user can not be logged in")
+            }
+        }
     }
-    
 }
-

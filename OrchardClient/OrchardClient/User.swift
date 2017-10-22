@@ -21,13 +21,13 @@ struct User: Codable {
 }
 
 extension User {
-    enum keys: String, CodingKey {
+    enum Keys: String, CodingKey {
         case email
         case password
     }
     
     init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: keys.self)
+    let container = try decoder.container(keyedBy: Keys.self)
     var email = try container.decodeIfPresent(String.self, forKey: .email) ?? "The email address could not be found"
     var password = try container.decodeIfPresent(String.self, forKey: .password) ?? "The password could not be found"
     self.init(email: email, password: password)
