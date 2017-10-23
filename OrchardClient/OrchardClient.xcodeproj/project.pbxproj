@@ -16,7 +16,7 @@
 		1C8DA3081F9C6F4400553C5A /* BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA3071F9C6F4400553C5A /* BasicAuth.swift */; };
 		1C8DA30A1F9C732B00553C5A /* LogInNetworkingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA3091F9C732B00553C5A /* LogInNetworkingCode.swift */; };
 		1C8DA30C1F9D5FCB00553C5A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA30B1F9D5FCB00553C5A /* Alerts.swift */; };
-		1C8DA30E1F9D612C00553C5A /* GithubNetowrkingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA30D1F9D612C00553C5A /* GithubNetowrkingCode.swift */; };
+		1C8DA30E1F9D612C00553C5A /* GithubNetworkingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA30D1F9D612C00553C5A /* GithubNetworkingCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		1C8DA3071F9C6F4400553C5A /* BasicAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAuth.swift; sourceTree = "<group>"; };
 		1C8DA3091F9C732B00553C5A /* LogInNetworkingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInNetworkingCode.swift; sourceTree = "<group>"; };
 		1C8DA30B1F9D5FCB00553C5A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		1C8DA30D1F9D612C00553C5A /* GithubNetowrkingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetowrkingCode.swift; sourceTree = "<group>"; };
+		1C8DA30D1F9D612C00553C5A /* GithubNetworkingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetworkingCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 				1C8DA2F91F9C60F500553C5A /* Assets.xcassets */,
 				1C8DA2FB1F9C60F500553C5A /* LaunchScreen.storyboard */,
 				1C8DA2FE1F9C60F500553C5A /* Info.plist */,
-				1C8DA30D1F9D612C00553C5A /* GithubNetowrkingCode.swift */,
+				1C8DA30D1F9D612C00553C5A /* GithubNetworkingCode.swift */,
 			);
 			path = OrchardClient;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C8DA30E1F9D612C00553C5A /* GithubNetowrkingCode.swift in Sources */,
+				1C8DA30E1F9D612C00553C5A /* GithubNetworkingCode.swift in Sources */,
 				1C8DA2F51F9C60F500553C5A /* LogInViewController.swift in Sources */,
 				1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */,
 				1C8DA30A1F9C732B00553C5A /* LogInNetworkingCode.swift in Sources */,
