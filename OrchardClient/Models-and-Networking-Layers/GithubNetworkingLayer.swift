@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 
 let session = URLSession.shared
-var login: DisplayGithubUsers?
+var displayInstance: DisplayGithubUsers?
+//var username1 = displayInstance?.findUserTextField.text
+var username1 = "matthewharrilal"
 
 enum GithubRoutes {
     case users()
@@ -21,8 +23,8 @@ enum GithubRoutes {
 //        case .users:
 //            return "/users\(self.users.username)"
         case .users:
-//            return "/users/\(login?.findUserTextField.text)"
-            return "/users/elmerastudillo"
+            return "/users/\(username1)"
+//            return "/users/elmerastudillo"
         }
     }
     

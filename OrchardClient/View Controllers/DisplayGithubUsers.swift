@@ -23,11 +23,11 @@ class DisplayGithubUsers: UIViewController {
     }
     
     @IBAction func findUserButton(_ sender: Any) {
+        let user = GithubUser(login: "", email: <#T##String?#>)
         networkingInstance.network(route: .users(), requestRoute: .get) { (data, response) in
             let users = try? JSONDecoder().decode(GithubUser.self, from: data)
             guard let newUser = users?.email else{return}
             print(newUser)
-            
         }
     }
 }
