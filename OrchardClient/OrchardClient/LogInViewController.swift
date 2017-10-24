@@ -35,7 +35,7 @@ class LogInViewController: UIViewController {
             }
             else {
                 print("The user can not be logged in")
-                alertInstance.logInAlert(controller: self)
+                self.alertInstance.logInAlert(controller: self)
             }
         }
     }
