@@ -14,7 +14,6 @@ class DisplayGithubUsers: UIViewController {
     
     @IBOutlet weak var findUserTextField: UITextField!
     
-    var users: [GithubUser] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +23,11 @@ class DisplayGithubUsers: UIViewController {
     }
     
     @IBAction func findUserButton(_ sender: Any) {
-        networkingInstance.network(route: .users(username: findUserTextField.text!), requestRoute: .get) { (data, response) in
+        networkingInstance.network(route: .users(), requestRoute: .get) { (data, response) in
             let users = try? JSONDecoder().decode(GithubUser.self, from: data)
-                print(users)
+            guard let newUser = users?.email else{return}
+            print(newUser)
+            
         }
     }
 }

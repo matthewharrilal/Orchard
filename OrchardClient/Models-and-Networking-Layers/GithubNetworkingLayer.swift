@@ -10,15 +10,19 @@ import Foundation
 import UIKit
 
 let session = URLSession.shared
+var login: DisplayGithubUsers?
 
 enum GithubRoutes {
-    case users(username: String)
+    case users()
     
     func path() -> String {
 //       This represents the possible routes the user can take when verified and is querying the github api
         switch self {
+//        case .users:
+//            return "/users\(self.users.username)"
         case .users:
-            return "/users"
+//            return "/users/\(login?.findUserTextField.text)"
+            return "/users/elmerastudillo"
         }
     }
     
@@ -46,11 +50,11 @@ enum DifferentHttpMethods: String {
 
 class GithubNetworkingLayer {
 //  This is essentially the base url we are hitting when we make the network request
-    var baseURL = "https://api.github.com"
+   var baseURL = "https://api.github.com"
     
     func network(route: GithubRoutes, requestRoute: DifferentHttpMethods, completionHandler: @escaping (Data, Int) -> Void) {
-        var fullUrlString = URL(string: baseURL)
-        fullUrlString?.appendingQueryParameters(route.urlParameters())
+        var fullUrlString = URL(string: baseURL.appending(route.path()))
+//        fullUrlString?.appendingQueryParameters(route.urlParameters())
         var getRequest = URLRequest(url: fullUrlString!)
         getRequest.httpMethod = requestRoute.rawValue
         getRequest.allHTTPHeaderFields = route.urlHeaders()
@@ -61,6 +65,7 @@ class GithubNetworkingLayer {
             }
         }.resume()
     }
+    
 }
 
 //This is essentially what we call the sanitizing code to be able to implement the parametersr
