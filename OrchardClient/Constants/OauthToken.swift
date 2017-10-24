@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 class OauthToken {
-    static var githubToken = "token b295930e151061b5acbcd16a36edded9c09f114e"
+    static var githubToken = "token 137e0d2f57cd27360bace57d910f8785c0afd337"
 }
