@@ -16,8 +16,8 @@
 		1C8DA3081F9C6F4400553C5A /* BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA3071F9C6F4400553C5A /* BasicAuth.swift */; };
 		1C8DA30A1F9C732B00553C5A /* LogInNetworkingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA3091F9C732B00553C5A /* LogInNetworkingCode.swift */; };
 		1C8DA30C1F9D5FCB00553C5A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA30B1F9D5FCB00553C5A /* Alerts.swift */; };
-		1C8DA30E1F9D612C00553C5A /* GithubNetworkingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA30D1F9D612C00553C5A /* GithubNetworkingCode.swift */; };
-		1CF05EB01F9F18B70093B8C7 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EAF1F9F18B70093B8C7 /* GithubUser.swift */; };
+		1CF05EB01F9F18B70093B8C7 /* GithubNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */; };
+		1CF05EB41F9F1BDF0093B8C7 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		1C8DA3071F9C6F4400553C5A /* BasicAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAuth.swift; sourceTree = "<group>"; };
 		1C8DA3091F9C732B00553C5A /* LogInNetworkingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInNetworkingCode.swift; sourceTree = "<group>"; };
 		1C8DA30B1F9D5FCB00553C5A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		1C8DA30D1F9D612C00553C5A /* GithubNetworkingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetworkingCode.swift; sourceTree = "<group>"; };
-		1CF05EAF1F9F18B70093B8C7 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
+		1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetworkingLayer.swift; sourceTree = "<group>"; };
+		1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,9 @@
 		1C8DA2E61F9C60F500553C5A = {
 			isa = PBXGroup;
 			children = (
-				1CF05EAE1F9F18990093B8C7 /* Models */,
+				1CF05EB21F9F1AEB0093B8C7 /* Helpers */,
+				1CF05EB11F9F1ACF0093B8C7 /* View Controllers */,
+				1CF05EAE1F9F18990093B8C7 /* Models and Networking Layers */,
 				1C8DA2F11F9C60F500553C5A /* OrchardClient */,
 				1C8DA2F01F9C60F500553C5A /* Products */,
 			);
@@ -68,26 +70,40 @@
 			isa = PBXGroup;
 			children = (
 				1C8DA2F21F9C60F500553C5A /* AppDelegate.swift */,
-				1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */,
-				1C8DA30B1F9D5FCB00553C5A /* Alerts.swift */,
-				1C8DA3071F9C6F4400553C5A /* BasicAuth.swift */,
-				1C8DA3091F9C732B00553C5A /* LogInNetworkingCode.swift */,
 				1C8DA2F61F9C60F500553C5A /* Main.storyboard */,
 				1C8DA2F91F9C60F500553C5A /* Assets.xcassets */,
 				1C8DA2FB1F9C60F500553C5A /* LaunchScreen.storyboard */,
 				1C8DA2FE1F9C60F500553C5A /* Info.plist */,
-				1C8DA30D1F9D612C00553C5A /* GithubNetworkingCode.swift */,
 			);
 			path = OrchardClient;
 			sourceTree = "<group>";
 		};
-		1CF05EAE1F9F18990093B8C7 /* Models */ = {
+		1CF05EAE1F9F18990093B8C7 /* Models and Networking Layers */ = {
 			isa = PBXGroup;
 			children = (
 				1C8DA3051F9C6EA700553C5A /* User.swift */,
-				1CF05EAF1F9F18B70093B8C7 /* GithubUser.swift */,
+				1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */,
+				1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */,
+				1C8DA3091F9C732B00553C5A /* LogInNetworkingCode.swift */,
 			);
-			path = Models;
+			path = "Models and Networking Layers";
+			sourceTree = "<group>";
+		};
+		1CF05EB11F9F1ACF0093B8C7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1CF05EB21F9F1AEB0093B8C7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1C8DA30B1F9D5FCB00553C5A /* Alerts.swift */,
+				1C8DA3071F9C6F4400553C5A /* BasicAuth.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,12 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C8DA30E1F9D612C00553C5A /* GithubNetworkingCode.swift in Sources */,
 				1C8DA2F51F9C60F500553C5A /* LogInViewController.swift in Sources */,
 				1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */,
 				1C8DA30A1F9C732B00553C5A /* LogInNetworkingCode.swift in Sources */,
 				1C8DA3081F9C6F4400553C5A /* BasicAuth.swift in Sources */,
-				1CF05EB01F9F18B70093B8C7 /* GithubUser.swift in Sources */,
+				1CF05EB01F9F18B70093B8C7 /* GithubNetworkingLayer.swift in Sources */,
+				1CF05EB41F9F1BDF0093B8C7 /* GithubUser.swift in Sources */,
 				1C8DA30C1F9D5FCB00553C5A /* Alerts.swift in Sources */,
 				1C8DA3061F9C6EA700553C5A /* User.swift in Sources */,
 			);
