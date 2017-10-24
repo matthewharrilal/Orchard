@@ -22,12 +22,16 @@ enum GithubRoutes {
         }
     }
     
-    func urlParameters(username: String? = nil) -> [String: String] {
+    func urlParameters() -> [String: String] {
         switch self {
-        case .users():
+        case .users(let username):
             let userParameters = ["users": String(describing: username)]
             return userParameters
         }
+    }
+    
+    func urlHeaders() -> [String: String] {
+        var urlHeaders = ["Authorization": "token 3c88178cf1da9b50a51925b50ee465e241b3cc64"]
     }
 }
 
@@ -43,9 +47,16 @@ class GithubNetworkingLayer {
 //  This is essentially the base url we are hitting when we make the network request
     var baseURL = "https://api.github.com"
     
-    func network(route: GithubRoutes, user: GithubUser? = nil, requestRoute: DifferentHttpMethods, completionHandler: @escaping (Data, Int) -> Void) {
+    func network(route: GithubRoutes, requestRoute: DifferentHttpMethods, completionHandler: @escaping (Data, Int) -> Void) {
         var fullUrlString = URL(string: baseURL.appending(route.path()))
         fullUrlString?.appendingQueryParameters(route.urlParameters())
+        var getRequest = URLRequest(url: fullUrlString!)
+        getRequest.allHTTPHeaderFields = route.urlHeaders()
+        session.dataTask(with: getRequest) { (data, response, error) in
+            if let data = data {
+                completionHandler(data)
+            }
+        }.resume()
     }
 }
 

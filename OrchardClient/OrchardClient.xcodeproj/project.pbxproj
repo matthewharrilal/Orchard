@@ -18,6 +18,7 @@
 		1C8DA30C1F9D5FCB00553C5A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA30B1F9D5FCB00553C5A /* Alerts.swift */; };
 		1CF05EB01F9F18B70093B8C7 /* GithubNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */; };
 		1CF05EB41F9F1BDF0093B8C7 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */; };
+		1CF05EB61F9F1FF70093B8C7 /* DisplayGithubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB51F9F1FF70093B8C7 /* DisplayGithubUsers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1C8DA30B1F9D5FCB00553C5A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetworkingLayer.swift; sourceTree = "<group>"; };
 		1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
+		1CF05EB51F9F1FF70093B8C7 /* DisplayGithubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayGithubUsers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */,
+				1CF05EB51F9F1FF70093B8C7 /* DisplayGithubUsers.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */,
 				1C8DA30A1F9C732B00553C5A /* LogInNetworkingCode.swift in Sources */,
 				1C8DA3081F9C6F4400553C5A /* BasicAuth.swift in Sources */,
+				1CF05EB61F9F1FF70093B8C7 /* DisplayGithubUsers.swift in Sources */,
 				1CF05EB01F9F18B70093B8C7 /* GithubNetworkingLayer.swift in Sources */,
 				1CF05EB41F9F1BDF0093B8C7 /* GithubUser.swift in Sources */,
 				1C8DA30C1F9D5FCB00553C5A /* Alerts.swift in Sources */,
