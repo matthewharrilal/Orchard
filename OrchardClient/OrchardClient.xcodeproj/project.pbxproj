@@ -57,7 +57,7 @@
 				1CF05EB71F9F9B0D0093B8C7 /* Constants */,
 				1CF05EB21F9F1AEB0093B8C7 /* Helpers */,
 				1CF05EB11F9F1ACF0093B8C7 /* View Controllers */,
-				1CF05EAE1F9F18990093B8C7 /* Models and Networking Layers */,
+				1CF05EAE1F9F18990093B8C7 /* Models-and-Networking-Layers */,
 				1C8DA2F11F9C60F500553C5A /* OrchardClient */,
 				1C8DA2F01F9C60F500553C5A /* Products */,
 			);
@@ -83,7 +83,7 @@
 			path = OrchardClient;
 			sourceTree = "<group>";
 		};
-		1CF05EAE1F9F18990093B8C7 /* Models and Networking Layers */ = {
+		1CF05EAE1F9F18990093B8C7 /* Models-and-Networking-Layers */ = {
 			isa = PBXGroup;
 			children = (
 				1C8DA3051F9C6EA700553C5A /* User.swift */,
@@ -91,7 +91,7 @@
 				1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */,
 				1C8DA3091F9C732B00553C5A /* LogInNetworkingCode.swift */,
 			);
-			path = "Models and Networking Layers";
+			path = "Models-and-Networking-Layers";
 			sourceTree = "<group>";
 		};
 		1CF05EB11F9F1ACF0093B8C7 /* View Controllers */ = {
