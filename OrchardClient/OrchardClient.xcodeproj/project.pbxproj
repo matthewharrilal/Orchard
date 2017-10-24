@@ -19,6 +19,7 @@
 		1CF05EB01F9F18B70093B8C7 /* GithubNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */; };
 		1CF05EB41F9F1BDF0093B8C7 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */; };
 		1CF05EB61F9F1FF70093B8C7 /* DisplayGithubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB51F9F1FF70093B8C7 /* DisplayGithubUsers.swift */; };
+		1CF05EB91F9F9B250093B8C7 /* OauthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB81F9F9B250093B8C7 /* OauthToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetworkingLayer.swift; sourceTree = "<group>"; };
 		1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
 		1CF05EB51F9F1FF70093B8C7 /* DisplayGithubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayGithubUsers.swift; sourceTree = "<group>"; };
+		1CF05EB81F9F9B250093B8C7 /* OauthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		1C8DA2E61F9C60F500553C5A = {
 			isa = PBXGroup;
 			children = (
+				1CF05EB71F9F9B0D0093B8C7 /* Constants */,
 				1CF05EB21F9F1AEB0093B8C7 /* Helpers */,
 				1CF05EB11F9F1ACF0093B8C7 /* View Controllers */,
 				1CF05EAE1F9F18990093B8C7 /* Models and Networking Layers */,
@@ -107,6 +110,14 @@
 				1C8DA3071F9C6F4400553C5A /* BasicAuth.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1CF05EB71F9F9B0D0093B8C7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1CF05EB81F9F9B250093B8C7 /* OauthToken.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 				1C8DA30A1F9C732B00553C5A /* LogInNetworkingCode.swift in Sources */,
 				1C8DA3081F9C6F4400553C5A /* BasicAuth.swift in Sources */,
 				1CF05EB61F9F1FF70093B8C7 /* DisplayGithubUsers.swift in Sources */,
+				1CF05EB91F9F9B250093B8C7 /* OauthToken.swift in Sources */,
 				1CF05EB01F9F18B70093B8C7 /* GithubNetworkingLayer.swift in Sources */,
 				1CF05EB41F9F1BDF0093B8C7 /* GithubUser.swift in Sources */,
 				1C8DA30C1F9D5FCB00553C5A /* Alerts.swift in Sources */,

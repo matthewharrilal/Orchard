@@ -12,11 +12,21 @@ import UIKit
 class DisplayGithubUsers: UIViewController {
     let networkingInstance = GithubNetworkingLayer()
     
+    @IBOutlet weak var findUserTextField: UITextField!
+    
+    var users: [GithubUser] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func findUserButton(_ sender: Any) {
+        networkingInstance.network(route: .users(username: findUserTextField.text!), requestRoute: .get) { (data, response) in
+            let users = try? JSONDecoder().decode(GithubUser.self, from: data)
+                print(users)
+        }
     }
 }

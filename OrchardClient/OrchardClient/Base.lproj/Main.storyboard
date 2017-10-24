@@ -73,11 +73,17 @@
                                 <rect key="frame" x="146" y="383" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Find User"/>
+                                <connections>
+                                    <action selector="findUserButton:" destination="Mfy-ub-bp2" eventType="touchUpInside" id="eDX-Rw-C1Z"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="T4W-hy-cif"/>
                     </view>
+                    <connections>
+                        <outlet property="findUserTextField" destination="xqq-ww-rp0" id="KIw-pV-3lG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vy6-QS-NYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

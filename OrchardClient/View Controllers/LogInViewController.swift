@@ -35,7 +35,9 @@ class LogInViewController: UIViewController {
             }
             else {
                 print("The user can not be logged in")
-                self.alertInstance.logInAlert(controller: self)
+                DispatchQueue.main.async {
+                       self.alertInstance.logInAlert(controller: self)
+                }
             }
         }
     }

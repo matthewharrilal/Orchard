@@ -13,6 +13,7 @@ class Alert: UIViewController {
     func logInAlert(controller: UIViewController) {
         let logInFailure = UIAlertController(title: "Log In Failure", message: "Please try logging in again", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Try Again", style: .default, handler: nil)
+        logInFailure.addAction(cancelAction)
         controller.present(logInFailure, animated: true, completion: nil)
     }
 }

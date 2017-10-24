@@ -12,12 +12,12 @@ import UIKit
 let session = URLSession.shared
 
 enum GithubRoutes {
-    case users()
+    case users(username: String)
     
     func path() -> String {
 //       This represents the possible routes the user can take when verified and is querying the github api
         switch self {
-        case .users():
+        case .users:
             return "/users"
         }
     }
@@ -31,7 +31,8 @@ enum GithubRoutes {
     }
     
     func urlHeaders() -> [String: String] {
-        var urlHeaders = ["Authorization": "token 3c88178cf1da9b50a51925b50ee465e241b3cc64"]
+        var urlHeaders = ["Authorization": OauthToken.githubToken]
+        return urlHeaders
     }
 }
 
@@ -48,13 +49,15 @@ class GithubNetworkingLayer {
     var baseURL = "https://api.github.com"
     
     func network(route: GithubRoutes, requestRoute: DifferentHttpMethods, completionHandler: @escaping (Data, Int) -> Void) {
-        var fullUrlString = URL(string: baseURL.appending(route.path()))
+        var fullUrlString = URL(string: baseURL)
         fullUrlString?.appendingQueryParameters(route.urlParameters())
         var getRequest = URLRequest(url: fullUrlString!)
+        getRequest.httpMethod = requestRoute.rawValue
         getRequest.allHTTPHeaderFields = route.urlHeaders()
         session.dataTask(with: getRequest) { (data, response, error) in
+            let statusCode: Int = (response as! HTTPURLResponse).statusCode
             if let data = data {
-                completionHandler(data)
+                completionHandler(data, statusCode)
             }
         }.resume()
     }
