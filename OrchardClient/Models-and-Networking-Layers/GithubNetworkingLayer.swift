@@ -12,7 +12,10 @@ import UIKit
 let session = URLSession.shared
 var displayInstance: DisplayGithubUsers?
 //var username1 = displayInstance?.findUserTextField.text
-var username1 = "matthewharrilal"
+struct Constant
+{
+    static var username1 = ""
+}
 
 enum GithubRoutes {
     case users()
@@ -23,7 +26,10 @@ enum GithubRoutes {
 //        case .users:
 //            return "/users\(self.users.username)"
         case .users:
-            return "/users/\(username1)"
+            DispatchQueue.main.async {
+                print("The username the user has typed in is \(Constant.username1)")
+            }
+            return "/users/\(Constant.username1)"
 //            return "/users/elmerastudillo"
         }
     }
