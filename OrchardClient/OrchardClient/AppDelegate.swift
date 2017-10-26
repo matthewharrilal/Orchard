@@ -42,3 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    func configureInitialViewController(for window: UIWindow) {
+        let defaults = UserDefaults.standard
+        let initialViewController: UIViewController
+        
+        let user = User(
+    }
+}
+
