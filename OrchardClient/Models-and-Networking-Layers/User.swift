@@ -14,10 +14,12 @@ class User: NSObject, NSCoding, Codable {
     var email: String?
     var password: String?
     var credential: String?
+    var username: String?
     init(email: String?, password: String?) {
         self.email = email
         self.password = password
         self.credential = BasicAuth.generateBasicAuthHeader(username: self.email!, password: self.password!)
+        self.username = ""
     }
     
     

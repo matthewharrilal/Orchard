@@ -130,11 +130,19 @@
                                 <rect key="frame" x="150" y="410" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButton:" destination="5HA-FT-Z3Q" eventType="touchUpInside" id="2SH-YW-UfZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="1KP-X4-4tF"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="qxP-Re-iOm" id="K3x-3t-OU5"/>
+                        <outlet property="passwordTextField" destination="cjP-pA-RAC" id="Pd2-5P-mds"/>
+                        <outlet property="usernameTextField" destination="yO3-Es-lll" id="sEI-QM-vja"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oaw-FJ-Shr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

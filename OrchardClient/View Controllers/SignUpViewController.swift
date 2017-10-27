@@ -11,6 +11,11 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     //    MARK: UIElements
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    let networkingInstance = LogInNetworkingLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,4 +24,12 @@ class SignUpViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func signUpButton(_ sender: Any) {
+        let user = User(email: emailTextField.text, password: passwordTextField.text)
+        networkingInstance.network(route: .users(), user: user, requestRoute: .post) { (data, response) in
+            
+        }
+    }
+    
 }
