@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
-        <!--Display Github Users-->
+        <!--DisplayGithubUsers-->
         <scene sceneID="dor-gZ-aZS">
             <objects>
-                <viewController id="Mfy-ub-bp2" customClass="DisplayGithubUsers" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DisplayGithubUsers" title="DisplayGithubUsers" id="Mfy-ub-bp2" customClass="DisplayGithubUsers" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aT6-GN-8v2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+         var mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if UserDefaults.standard.bool(forKey: "LoggedIn") == true {
+             let viewController2 = mainStoryboard.instantiateViewController(withIdentifier: "DisplayGithubUsers")
+                window?.rootViewController = viewController2
+        }
         return true
     }
     
@@ -40,20 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-}
-
-extension AppDelegate {
-    func configureInitialViewController(for window: UIWindow) {
-        let defaults = UserDefaults.standard
-        let initialViewController: UIViewController
-        
-        defaults.set(true, forKey: "LoggedIn")
-        if defaults.bool(forKey: "LoggedIn") == true,
-            let user_data = defaults.object(forKey: "LoggedIn") as? Data,
-            let user = NSKeyedUnarchiver.unarchiveObject(with: user_data) as? User {
-            
-        }
-    }
 }
 
 
