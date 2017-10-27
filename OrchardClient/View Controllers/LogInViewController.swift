@@ -32,7 +32,10 @@ class LogInViewController: UIViewController {
             if responseInt == 200 {
                 print("The user was succesfully logged in")
                 self.defaults.set(true, forKey: "LoggedIn")
-                print("The value for the defaults is \(self.defaults.bool(forKey: "LoogedIn"))")
+                if let customerTokenData = self.defaults.data(forKey: "SignedUp") {
+                    let customerToken = NSKeyedUnarchiver.unarchiveObject(with: customerTokenData) as! User
+                    print(customerToken)
+                }
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "showUsers", sender: nil)
                 }

@@ -28,7 +28,12 @@ class SignUpViewController: UIViewController {
     @IBAction func signUpButton(_ sender: Any) {
         let user = User(email: emailTextField.text, password: passwordTextField.text)
         networkingInstance.network(route: .users(), user: user, requestRoute: .post) { (data, response) in
-            
+            DispatchQueue.main.async {
+                let customerToken = User(email: self.emailTextField.text, password: self.passwordTextField.text)
+                let tokenData = NSKeyedArchiver.archivedData(withRootObject: customerToken)
+                UserDefaults.standard.set(tokenData, forKey: "SignedUp")
+                print(customerToken)
+            }
         }
     }
     
