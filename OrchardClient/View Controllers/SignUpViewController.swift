@@ -34,7 +34,11 @@ class SignUpViewController: UIViewController {
                 UserDefaults.standard.set(tokenData, forKey: "SignedUp")
                 print(customerToken)
             }
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "toTrips", sender: nil)
+            }
         }
+        
     }
     
 }

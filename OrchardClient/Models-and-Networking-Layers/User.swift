@@ -22,6 +22,9 @@ class User: NSObject, NSCoding, Codable {
         self.username = ""
     }
     
+//    override var description: String {
+//        return "email: \(self.e)"
+//    }
     
     enum Keys: String, CodingKey {
         case email
@@ -51,6 +54,7 @@ class User: NSObject, NSCoding, Codable {
         aCoder.encode(credential, forKey: "credential")
     }
     
+
 }
 
 

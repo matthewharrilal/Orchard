@@ -34,7 +34,7 @@ class LogInViewController: UIViewController {
                 self.defaults.set(true, forKey: "LoggedIn")
                 if let customerTokenData = self.defaults.data(forKey: "SignedUp") {
                     let customerToken = NSKeyedUnarchiver.unarchiveObject(with: customerTokenData) as! User
-                    print(customerToken)
+                    print("This is the users token \(customerToken)")
                 }
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "showUsers", sender: nil)
