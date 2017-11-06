@@ -31,5 +31,6 @@ class FindGithubUsers: UIViewController {
             print("This is the users login \(String(describing: users?.login))")
             print("This is the users profile picture address \(String(describing: users?.avatarUrl))")
         }
+        self.performSegue(withIdentifier: "displayGithubUser", sender: nil)
     }
 }

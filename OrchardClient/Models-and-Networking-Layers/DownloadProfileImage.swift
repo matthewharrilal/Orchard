@@ -18,7 +18,7 @@ enum HttpMethods: String {
 
 class DownloadProfileImage {
     
-    var profileImageUrl: String?
+    var profileImageUrl = "https://avatars3.githubusercontent.com/u/30048602?v=4"
     
     var session = URLSession.shared
     
@@ -28,9 +28,10 @@ class DownloadProfileImage {
         
         githubUserInstance.network(route: .users(), requestRoute: .get) { (data, response) in
             var user = try? JSONDecoder().decode(GithubUser.self, from: data)
+            print(user?.avatarUrl)
             user?.avatarUrl = self.profileImageUrl
         }
-        self.session.downloadTask(with: URLRequest(url: URL(string: profileImageUrl!)!)) { (url, response, error) in
+        self.session.downloadTask(with: URLRequest(url: URL(string: profileImageUrl)!)) { (url, response, error) in
             if let url = url {
                 completionHandler(url)
             }
