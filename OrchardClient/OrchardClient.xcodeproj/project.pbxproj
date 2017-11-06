@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0318F01FB0B7F5004CF2B4 /* DownloadProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0318EF1FB0B7F5004CF2B4 /* DownloadProfileImage.swift */; };
+		1C0318F21FB0BE60004CF2B4 /* DisplayGithubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0318F11FB0BE60004CF2B4 /* DisplayGithubUsers.swift */; };
 		1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F21F9C60F500553C5A /* AppDelegate.swift */; };
 		1C8DA2F51F9C60F500553C5A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */; };
 		1C8DA2F81F9C60F500553C5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F61F9C60F500553C5A /* Main.storyboard */; };
@@ -19,11 +21,14 @@
 		1CA523E61FA2E76D00E792A8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA523E51FA2E76D00E792A8 /* SignUpViewController.swift */; };
 		1CF05EB01F9F18B70093B8C7 /* GithubNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */; };
 		1CF05EB41F9F1BDF0093B8C7 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */; };
-		1CF05EB61F9F1FF70093B8C7 /* DisplayGithubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB51F9F1FF70093B8C7 /* DisplayGithubUsers.swift */; };
+		1CF05EB61F9F1FF70093B8C7 /* FIndGithubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB51F9F1FF70093B8C7 /* FIndGithubUsers.swift */; };
 		1CF05EB91F9F9B250093B8C7 /* OauthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB81F9F9B250093B8C7 /* OauthToken.swift */; };
+		5E2F9088744B24960B513589 /* Pods_OrchardClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3D4316923DCA8E60ADF579 /* Pods_OrchardClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C0318EF1FB0B7F5004CF2B4 /* DownloadProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadProfileImage.swift; sourceTree = "<group>"; };
+		1C0318F11FB0BE60004CF2B4 /* DisplayGithubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayGithubUsers.swift; sourceTree = "<group>"; };
 		1C8DA2EF1F9C60F500553C5A /* OrchardClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrchardClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8DA2F21F9C60F500553C5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -38,8 +43,11 @@
 		1CA523E51FA2E76D00E792A8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetworkingLayer.swift; sourceTree = "<group>"; };
 		1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
-		1CF05EB51F9F1FF70093B8C7 /* DisplayGithubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayGithubUsers.swift; sourceTree = "<group>"; };
+		1CF05EB51F9F1FF70093B8C7 /* FIndGithubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIndGithubUsers.swift; sourceTree = "<group>"; };
 		1CF05EB81F9F9B250093B8C7 /* OauthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthToken.swift; sourceTree = "<group>"; };
+		AD3D4316923DCA8E60ADF579 /* Pods_OrchardClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrchardClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4575281DD01A9EC711C93D0 /* Pods-OrchardClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrchardClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrchardClient/Pods-OrchardClient.release.xcconfig"; sourceTree = "<group>"; };
+		F77725FD0749C8B351FC031A /* Pods-OrchardClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrchardClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrchardClient/Pods-OrchardClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2F9088744B24960B513589 /* Pods_OrchardClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,8 @@
 				1CF05EAE1F9F18990093B8C7 /* Models-and-Networking-Layers */,
 				1C8DA2F11F9C60F500553C5A /* OrchardClient */,
 				1C8DA2F01F9C60F500553C5A /* Products */,
+				F402F9474885CF9EFF651FAF /* Pods */,
+				34EE4516DC50589F0CCFC5BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +101,7 @@
 			children = (
 				1C8DA3051F9C6EA700553C5A /* User.swift */,
 				1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */,
+				1C0318EF1FB0B7F5004CF2B4 /* DownloadProfileImage.swift */,
 				1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */,
 				1C8DA3091F9C732B00553C5A /* LogInNetworkingCode.swift */,
 			);
@@ -100,8 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */,
-				1CF05EB51F9F1FF70093B8C7 /* DisplayGithubUsers.swift */,
+				1CF05EB51F9F1FF70093B8C7 /* FIndGithubUsers.swift */,
 				1CA523E51FA2E76D00E792A8 /* SignUpViewController.swift */,
+				1C0318F11FB0BE60004CF2B4 /* DisplayGithubUsers.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -123,6 +136,23 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		34EE4516DC50589F0CCFC5BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD3D4316923DCA8E60ADF579 /* Pods_OrchardClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F402F9474885CF9EFF651FAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F77725FD0749C8B351FC031A /* Pods-OrchardClient.debug.xcconfig */,
+				B4575281DD01A9EC711C93D0 /* Pods-OrchardClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,10 +160,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C8DA3011F9C60F500553C5A /* Build configuration list for PBXNativeTarget "OrchardClient" */;
 			buildPhases = (
+				32094B53909631CFAC55B9E6 /* [CP] Check Pods Manifest.lock */,
 				1C8DA2EB1F9C60F500553C5A /* Sources */,
 				1C8DA2EC1F9C60F500553C5A /* Frameworks */,
 				1C8DA2ED1F9C60F500553C5A /* Resources */,
 				1C8DA3041F9C611300553C5A /* ShellScript */,
+				D390F1091649DD0344C42DBE /* [CP] Embed Pods Frameworks */,
+				E53C0C4EC4F5D641F6829718 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +238,59 @@
 			shellPath = /bin/sh;
 			shellScript = "";
 		};
+		32094B53909631CFAC55B9E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrchardClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D390F1091649DD0344C42DBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OrchardClient/Pods-OrchardClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrchardClient/Pods-OrchardClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E53C0C4EC4F5D641F6829718 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OrchardClient/Pods-OrchardClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -213,16 +299,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA523E61FA2E76D00E792A8 /* SignUpViewController.swift in Sources */,
+				1C0318F01FB0B7F5004CF2B4 /* DownloadProfileImage.swift in Sources */,
 				1C8DA2F51F9C60F500553C5A /* LogInViewController.swift in Sources */,
 				1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */,
 				1C8DA30A1F9C732B00553C5A /* LogInNetworkingCode.swift in Sources */,
 				1C8DA3081F9C6F4400553C5A /* BasicAuth.swift in Sources */,
-				1CF05EB61F9F1FF70093B8C7 /* DisplayGithubUsers.swift in Sources */,
+				1CF05EB61F9F1FF70093B8C7 /* FIndGithubUsers.swift in Sources */,
 				1CF05EB91F9F9B250093B8C7 /* OauthToken.swift in Sources */,
 				1CF05EB01F9F18B70093B8C7 /* GithubNetworkingLayer.swift in Sources */,
 				1CF05EB41F9F1BDF0093B8C7 /* GithubUser.swift in Sources */,
 				1C8DA30C1F9D5FCB00553C5A /* Alerts.swift in Sources */,
 				1C8DA3061F9C6EA700553C5A /* User.swift in Sources */,
+				1C0318F21FB0BE60004CF2B4 /* DisplayGithubUsers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +445,7 @@
 		};
 		1C8DA3021F9C60F500553C5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F77725FD0749C8B351FC031A /* Pods-OrchardClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,6 +461,7 @@
 		};
 		1C8DA3031F9C60F500553C5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4575281DD01A9EC711C93D0 /* Pods-OrchardClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

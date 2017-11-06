@@ -8,8 +8,10 @@
 
 import Foundation
 import UIKit
+import KeychainSwift
 
 class User: NSObject, NSCoding, Codable {
+    
     
     var email: String?
     var password: String?
@@ -20,6 +22,7 @@ class User: NSObject, NSCoding, Codable {
         self.password = password
         self.credential = BasicAuth.generateBasicAuthHeader(username: self.email!, password: self.password!)
         self.username = ""
+//        self.keychain.set(credential!, forKey: "keychainCredential")
     }
     
 //    override var description: String {

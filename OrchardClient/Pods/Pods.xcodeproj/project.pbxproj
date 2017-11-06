@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08AA89D020B5C4FD74D1529A3E972AB9 /* KeychainSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F009983A5773177179A7B00936CB4541 /* KeychainSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1092DDBBA62C650A3D4A11264D44ECA0 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D045EBB272BC55780D0EAE72383DDF0 /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3CFAA0A96F374DB2327693B1EE473AD1 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E0D090CB02B1E1990E819F411542B7 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		482A640D9F28929FE508B5DCD5192A11 /* QuickZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4118EA6304C6B0C1FA7A79715F69CF /* QuickZip.swift */; };
+		4910066B373D48C22DC24FF5A510DF4F /* Zip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA1E679ED8E86C0349D472DC6F0A52E /* Zip-dummy.m */; };
+		5B0BB11462F9B7B2CD081ADE71EBB70A /* Pods-OrchardClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1097ACF558B7CE3340D21B5DAF64F80 /* Pods-OrchardClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63E3E54D78ECF2A2C25FB5F202B96D40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6AE7D14A5AD0E19EC9ABBD5FA91E1958 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = B67C9A7A1D77A8FEC7403DAB0140050F /* zip.c */; };
+		6FE992693BC7A540B30FC2F312DA06FA /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1742127B586DCDBC68B82233E36D192D /* Zip.swift */; };
+		760C7B30CC71F07259C46ECB7B3705EF /* ZipUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3EAEF499C991ADD68CC9EB6B2CFD79 /* ZipUtilities.swift */; };
+		7B07E38CE76C308EA49E002E9C260AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7C0F17488B3552EAAFC074CFC4491DD5 /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D55FD43999C78D56C555B72A5D30944 /* TegKeychainConstants.swift */; };
+		8788D42E2C35559440A08785E5CC133E /* Zip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C6CECECAB594FDD3E5A2552DB6905A7 /* Zip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD0E8D5F58B0B824D2631BDA9D541DFE /* KeychainSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7706CDB55781EBD5CD18C8B5037E40E /* KeychainSwift-dummy.m */; };
+		AD96F8A31CEEF36CC2569E3591543943 /* Pods-OrchardClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A79E361F6E9795349DEC8ECD65B0F2 /* Pods-OrchardClient-dummy.m */; };
+		C24DAC34A458D3B02F32273680361290 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C2CE9CE48C61E526F76FE1124E161BFA /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = FF4034A071DFED2B0EB5D336E14AF0E3 /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CCBE57237E9F0DBAAF02A5575244F3BE /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06648CF01DDCB511E92AE289BDC09D8 /* KeychainSwift.swift */; };
+		E32B10C0CF40C2342F01E6B3D7BE8E94 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = F6DC23C9E20A38E2EA70ED63E10BE4C3 /* ioapi.c */; };
+		EAFE5C0F2841EC50CB89EE1CDDF87578 /* Zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 46669989DEEBDAB5F51751AF7ECC8948 /* Zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBA8B955A11296BD7AA307752FE82ED4 /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62300EE600891C41B788F4719B6797EC /* KeychainSwiftAccessOptions.swift */; };
+		EFDDA083DD8A210426D9FE53641E2D5C /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B5FD4304C065C969CFEDA09C162F66 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FB09FBD786C4BFD4A7556234DA978C99 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = E29AD4EB2A36F43A2D599778CA15B2F3 /* unzip.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		058C3FB5B02D30131873DC260FD03DD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38ACA430605AFB4229712A18BDDF5086;
+			remoteInfo = KeychainSwift;
+		};
+		C86DDFF6805EED390DBF7FA11A306C9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE53F0EA17D0401C335DED2CDCBBB0BC;
+			remoteInfo = Zip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		044A080912187182037AA21C38EA6162 /* Pods-OrchardClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrchardClient.debug.xcconfig"; sourceTree = "<group>"; };
+		04BF30C9DC2BADE2EE6A44CBEAF1E270 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A65EE7DFFC646303A7821A82F2E5671 /* KeychainSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KeychainSwift.modulemap; sourceTree = "<group>"; };
+		1742127B586DCDBC68B82233E36D192D /* Zip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Zip.swift; path = Zip/Zip.swift; sourceTree = "<group>"; };
+		1AFD7455D30EC6AC5AAC1A7035197290 /* Pods-OrchardClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OrchardClient.release.xcconfig"; sourceTree = "<group>"; };
+		1D55FD43999C78D56C555B72A5D30944 /* TegKeychainConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TegKeychainConstants.swift; path = Sources/TegKeychainConstants.swift; sourceTree = "<group>"; };
+		292AE8646C3C98F6F879FEE35236D4A6 /* Pods-OrchardClient-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrchardClient-resources.sh"; sourceTree = "<group>"; };
+		2C7F5F5B63F151BE11DC5F13EC36179F /* Pods-OrchardClient-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OrchardClient-acknowledgements.plist"; sourceTree = "<group>"; };
+		2E8AE9F22BD1CCE2F08CD8CF73ADA809 /* Zip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-prefix.pch"; sourceTree = "<group>"; };
+		2FCEA95B9D30126BF299A8DB3BED527C /* Zip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Zip.xcconfig; sourceTree = "<group>"; };
+		3847EC38CD189A098548F396BEDF45E4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C6CECECAB594FDD3E5A2552DB6905A7 /* Zip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-umbrella.h"; sourceTree = "<group>"; };
+		422D5245F4B37C2C353C96DDEACF2E35 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		428BF4CFB02FF9AE7AB8BCECEEDDD49C /* Zip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Zip.modulemap; sourceTree = "<group>"; };
+		43E0D090CB02B1E1990E819F411542B7 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = Zip/minizip/unzip.h; sourceTree = "<group>"; };
+		46669989DEEBDAB5F51751AF7ECC8948 /* Zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Zip.h; path = Zip/Zip.h; sourceTree = "<group>"; };
+		55E0187286E2144DFA5BDDC96C8E89A3 /* Pods_OrchardClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OrchardClient.framework; path = "Pods-OrchardClient.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C3EAEF499C991ADD68CC9EB6B2CFD79 /* ZipUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipUtilities.swift; path = Zip/ZipUtilities.swift; sourceTree = "<group>"; };
+		5E6F2CDC8A2E1EE2663BE17EFB7CFCA9 /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Zip.framework; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E84D02FAF48FCB56E38BD06C200E52D /* KeychainSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainSwift.xcconfig; sourceTree = "<group>"; };
+		62300EE600891C41B788F4719B6797EC /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = Sources/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		74B5FD4304C065C969CFEDA09C162F66 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = Zip/minizip/crypt.h; sourceTree = "<group>"; };
+		7EA634A956108BAC633C3888BFB4ABB9 /* KeychainSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-prefix.pch"; sourceTree = "<group>"; };
+		8D045EBB272BC55780D0EAE72383DDF0 /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = Zip/minizip/ioapi.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E41CC286A188ED7F25ABB612B61FEE7 /* Pods-OrchardClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-OrchardClient.modulemap"; sourceTree = "<group>"; };
+		A4A79E361F6E9795349DEC8ECD65B0F2 /* Pods-OrchardClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OrchardClient-dummy.m"; sourceTree = "<group>"; };
+		B67C9A7A1D77A8FEC7403DAB0140050F /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = Zip/minizip/zip.c; sourceTree = "<group>"; };
+		CA4118EA6304C6B0C1FA7A79715F69CF /* QuickZip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickZip.swift; path = Zip/QuickZip.swift; sourceTree = "<group>"; };
+		DCA1E679ED8E86C0349D472DC6F0A52E /* Zip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Zip-dummy.m"; sourceTree = "<group>"; };
+		E06648CF01DDCB511E92AE289BDC09D8 /* KeychainSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwift.swift; path = Sources/KeychainSwift.swift; sourceTree = "<group>"; };
+		E1097ACF558B7CE3340D21B5DAF64F80 /* Pods-OrchardClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OrchardClient-umbrella.h"; sourceTree = "<group>"; };
+		E29AD4EB2A36F43A2D599778CA15B2F3 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = Zip/minizip/unzip.c; sourceTree = "<group>"; };
+		EBFC4175C6CF9D3F8231C63F85009EAD /* Pods-OrchardClient-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OrchardClient-frameworks.sh"; sourceTree = "<group>"; };
+		EE9218528E9C1FB788E99FC8F4A6AEB3 /* Pods-OrchardClient-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OrchardClient-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F009983A5773177179A7B00936CB4541 /* KeychainSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-umbrella.h"; sourceTree = "<group>"; };
+		F413095F40A427754008AFEEA40489FE /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainSwift.framework; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6DC23C9E20A38E2EA70ED63E10BE4C3 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = Zip/minizip/ioapi.c; sourceTree = "<group>"; };
+		F7706CDB55781EBD5CD18C8B5037E40E /* KeychainSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainSwift-dummy.m"; sourceTree = "<group>"; };
+		FF4034A071DFED2B0EB5D336E14AF0E3 /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = Zip/minizip/zip.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4644C6D96A73768B60CF66E22FD3B879 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E3E54D78ECF2A2C25FB5F202B96D40 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CF5DAE3211FF014FE8E61C48FA54BEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24DAC34A458D3B02F32273680361290 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F63379725BB87FBFC8D4FDD48BE55F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B07E38CE76C308EA49E002E9C260AA0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01DF689CE79F6FD3C86FBD1A9DF4E43B /* KeychainSwift */ = {
+			isa = PBXGroup;
+			children = (
+				E06648CF01DDCB511E92AE289BDC09D8 /* KeychainSwift.swift */,
+				62300EE600891C41B788F4719B6797EC /* KeychainSwiftAccessOptions.swift */,
+				1D55FD43999C78D56C555B72A5D30944 /* TegKeychainConstants.swift */,
+				B2A817AEDB3C624CC50479FF13CCA612 /* Support Files */,
+			);
+			name = KeychainSwift;
+			path = KeychainSwift;
+			sourceTree = "<group>";
+		};
+		24EE791233C6A1AEEB7E96A3AE52F617 /* Pods-OrchardClient */ = {
+			isa = PBXGroup;
+			children = (
+				422D5245F4B37C2C353C96DDEACF2E35 /* Info.plist */,
+				9E41CC286A188ED7F25ABB612B61FEE7 /* Pods-OrchardClient.modulemap */,
+				EE9218528E9C1FB788E99FC8F4A6AEB3 /* Pods-OrchardClient-acknowledgements.markdown */,
+				2C7F5F5B63F151BE11DC5F13EC36179F /* Pods-OrchardClient-acknowledgements.plist */,
+				A4A79E361F6E9795349DEC8ECD65B0F2 /* Pods-OrchardClient-dummy.m */,
+				EBFC4175C6CF9D3F8231C63F85009EAD /* Pods-OrchardClient-frameworks.sh */,
+				292AE8646C3C98F6F879FEE35236D4A6 /* Pods-OrchardClient-resources.sh */,
+				E1097ACF558B7CE3340D21B5DAF64F80 /* Pods-OrchardClient-umbrella.h */,
+				044A080912187182037AA21C38EA6162 /* Pods-OrchardClient.debug.xcconfig */,
+				1AFD7455D30EC6AC5AAC1A7035197290 /* Pods-OrchardClient.release.xcconfig */,
+			);
+			name = "Pods-OrchardClient";
+			path = "Target Support Files/Pods-OrchardClient";
+			sourceTree = "<group>";
+		};
+		5D6E6A46D9604F751BB9A2DE0E97E295 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01DF689CE79F6FD3C86FBD1A9DF4E43B /* KeychainSwift */,
+				C421AC6C923851ADF68604D1ECC52691 /* Zip */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				5D6E6A46D9604F751BB9A2DE0E97E295 /* Pods */,
+				AE5A70B1F846A7D0A649DD4C130F6B1D /* Products */,
+				DF049A8316C0E17B9F46AB82A028E6FB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A3E70129ABFCFF660B15FF5C0F9635F4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				04BF30C9DC2BADE2EE6A44CBEAF1E270 /* Info.plist */,
+				428BF4CFB02FF9AE7AB8BCECEEDDD49C /* Zip.modulemap */,
+				2FCEA95B9D30126BF299A8DB3BED527C /* Zip.xcconfig */,
+				DCA1E679ED8E86C0349D472DC6F0A52E /* Zip-dummy.m */,
+				2E8AE9F22BD1CCE2F08CD8CF73ADA809 /* Zip-prefix.pch */,
+				3C6CECECAB594FDD3E5A2552DB6905A7 /* Zip-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Zip";
+			sourceTree = "<group>";
+		};
+		AE5A70B1F846A7D0A649DD4C130F6B1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F413095F40A427754008AFEEA40489FE /* KeychainSwift.framework */,
+				55E0187286E2144DFA5BDDC96C8E89A3 /* Pods_OrchardClient.framework */,
+				5E6F2CDC8A2E1EE2663BE17EFB7CFCA9 /* Zip.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2A817AEDB3C624CC50479FF13CCA612 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3847EC38CD189A098548F396BEDF45E4 /* Info.plist */,
+				0A65EE7DFFC646303A7821A82F2E5671 /* KeychainSwift.modulemap */,
+				5E84D02FAF48FCB56E38BD06C200E52D /* KeychainSwift.xcconfig */,
+				F7706CDB55781EBD5CD18C8B5037E40E /* KeychainSwift-dummy.m */,
+				7EA634A956108BAC633C3888BFB4ABB9 /* KeychainSwift-prefix.pch */,
+				F009983A5773177179A7B00936CB4541 /* KeychainSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KeychainSwift";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C421AC6C923851ADF68604D1ECC52691 /* Zip */ = {
+			isa = PBXGroup;
+			children = (
+				74B5FD4304C065C969CFEDA09C162F66 /* crypt.h */,
+				F6DC23C9E20A38E2EA70ED63E10BE4C3 /* ioapi.c */,
+				8D045EBB272BC55780D0EAE72383DDF0 /* ioapi.h */,
+				CA4118EA6304C6B0C1FA7A79715F69CF /* QuickZip.swift */,
+				E29AD4EB2A36F43A2D599778CA15B2F3 /* unzip.c */,
+				43E0D090CB02B1E1990E819F411542B7 /* unzip.h */,
+				B67C9A7A1D77A8FEC7403DAB0140050F /* zip.c */,
+				46669989DEEBDAB5F51751AF7ECC8948 /* Zip.h */,
+				FF4034A071DFED2B0EB5D336E14AF0E3 /* zip.h */,
+				1742127B586DCDBC68B82233E36D192D /* Zip.swift */,
+				5C3EAEF499C991ADD68CC9EB6B2CFD79 /* ZipUtilities.swift */,
+				A3E70129ABFCFF660B15FF5C0F9635F4 /* Support Files */,
+			);
+			name = Zip;
+			path = Zip;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DF049A8316C0E17B9F46AB82A028E6FB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				24EE791233C6A1AEEB7E96A3AE52F617 /* Pods-OrchardClient */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4F1502AA31A6FDDD96F21954FF57A58C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B0BB11462F9B7B2CD081ADE71EBB70A /* Pods-OrchardClient-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D07108084C5B3D9E0C83672BC710D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDDA083DD8A210426D9FE53641E2D5C /* crypt.h in Headers */,
+				1092DDBBA62C650A3D4A11264D44ECA0 /* ioapi.h in Headers */,
+				3CFAA0A96F374DB2327693B1EE473AD1 /* unzip.h in Headers */,
+				8788D42E2C35559440A08785E5CC133E /* Zip-umbrella.h in Headers */,
+				C2CE9CE48C61E526F76FE1124E161BFA /* zip.h in Headers */,
+				EAFE5C0F2841EC50CB89EE1CDDF87578 /* Zip.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCCA8DB9A9A2B78257AAEB7F44C85C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08AA89D020B5C4FD74D1529A3E972AB9 /* KeychainSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		38ACA430605AFB4229712A18BDDF5086 /* KeychainSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16C5D5A8E6CDB4211B0732F819F55A47 /* Build configuration list for PBXNativeTarget "KeychainSwift" */;
+			buildPhases = (
+				BA64D531146693E66BF1C1CEE1D81BC5 /* Sources */,
+				4644C6D96A73768B60CF66E22FD3B879 /* Frameworks */,
+				FDCCA8DB9A9A2B78257AAEB7F44C85C3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeychainSwift;
+			productName = KeychainSwift;
+			productReference = F413095F40A427754008AFEEA40489FE /* KeychainSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		724CCEE501AE687928A46F9F106F5219 /* Pods-OrchardClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D5BD6D5B2900D6EDEEE0A26245BBA73 /* Build configuration list for PBXNativeTarget "Pods-OrchardClient" */;
+			buildPhases = (
+				4DF8879F88BC908209C139875BCDB6AE /* Sources */,
+				4F63379725BB87FBFC8D4FDD48BE55F4 /* Frameworks */,
+				4F1502AA31A6FDDD96F21954FF57A58C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6542DEEAA007EFC2071FE8282762031 /* PBXTargetDependency */,
+				B900F3A64E3222822A912E44D79F15FE /* PBXTargetDependency */,
+			);
+			name = "Pods-OrchardClient";
+			productName = "Pods-OrchardClient";
+			productReference = 55E0187286E2144DFA5BDDC96C8E89A3 /* Pods_OrchardClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE53F0EA17D0401C335DED2CDCBBB0BC /* Zip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6007942803D7E29A79021D305B1D3734 /* Build configuration list for PBXNativeTarget "Zip" */;
+			buildPhases = (
+				BF9726DBD05C9E468AE6CE846A2D305F /* Sources */,
+				4CF5DAE3211FF014FE8E61C48FA54BEF /* Frameworks */,
+				F9D07108084C5B3D9E0C83672BC710D6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zip;
+			productName = Zip;
+			productReference = 5E6F2CDC8A2E1EE2663BE17EFB7CFCA9 /* Zip.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = AE5A70B1F846A7D0A649DD4C130F6B1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38ACA430605AFB4229712A18BDDF5086 /* KeychainSwift */,
+				724CCEE501AE687928A46F9F106F5219 /* Pods-OrchardClient */,
+				BE53F0EA17D0401C335DED2CDCBBB0BC /* Zip */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DF8879F88BC908209C139875BCDB6AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD96F8A31CEEF36CC2569E3591543943 /* Pods-OrchardClient-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA64D531146693E66BF1C1CEE1D81BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD0E8D5F58B0B824D2631BDA9D541DFE /* KeychainSwift-dummy.m in Sources */,
+				CCBE57237E9F0DBAAF02A5575244F3BE /* KeychainSwift.swift in Sources */,
+				EBA8B955A11296BD7AA307752FE82ED4 /* KeychainSwiftAccessOptions.swift in Sources */,
+				7C0F17488B3552EAAFC074CFC4491DD5 /* TegKeychainConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF9726DBD05C9E468AE6CE846A2D305F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E32B10C0CF40C2342F01E6B3D7BE8E94 /* ioapi.c in Sources */,
+				482A640D9F28929FE508B5DCD5192A11 /* QuickZip.swift in Sources */,
+				FB09FBD786C4BFD4A7556234DA978C99 /* unzip.c in Sources */,
+				4910066B373D48C22DC24FF5A510DF4F /* Zip-dummy.m in Sources */,
+				6AE7D14A5AD0E19EC9ABBD5FA91E1958 /* zip.c in Sources */,
+				6FE992693BC7A540B30FC2F312DA06FA /* Zip.swift in Sources */,
+				760C7B30CC71F07259C46ECB7B3705EF /* ZipUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B900F3A64E3222822A912E44D79F15FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Zip;
+			target = BE53F0EA17D0401C335DED2CDCBBB0BC /* Zip */;
+			targetProxy = C86DDFF6805EED390DBF7FA11A306C9D /* PBXContainerItemProxy */;
+		};
+		D6542DEEAA007EFC2071FE8282762031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeychainSwift;
+			target = 38ACA430605AFB4229712A18BDDF5086 /* KeychainSwift */;
+			targetProxy = 058C3FB5B02D30131873DC260FD03DD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A41B15D3AA834993ADDD808FA9D8764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54FAFE78F3E6903FC9AC6B3E4AF54293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AFD7455D30EC6AC5AAC1A7035197290 /* Pods-OrchardClient.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OrchardClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OrchardClient/Pods-OrchardClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OrchardClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6F96F0C8C6A9DDABC6480FA989863756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FCEA95B9D30126BF299A8DB3BED527C /* Zip.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Zip/Zip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Zip/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Zip/Zip.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Zip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		85120D92EFA8C342DED85EFCA0AC6A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 044A080912187182037AA21C38EA6162 /* Pods-OrchardClient.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OrchardClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OrchardClient/Pods-OrchardClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OrchardClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		943D02DEBCDE39DE93AE5B888278CF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E84D02FAF48FCB56E38BD06C200E52D /* KeychainSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeychainSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KeychainSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A1FB3E7652829E555566FD66C2BC6ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FCEA95B9D30126BF299A8DB3BED527C /* Zip.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Zip/Zip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Zip/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Zip/Zip.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Zip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BC80BBB5C066539FFFC0B2127CA5D3C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		EFD45BEBA3F62B8A10BABA5D567FE881 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E84D02FAF48FCB56E38BD06C200E52D /* KeychainSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeychainSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KeychainSwift/KeychainSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KeychainSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16C5D5A8E6CDB4211B0732F819F55A47 /* Build configuration list for PBXNativeTarget "KeychainSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				943D02DEBCDE39DE93AE5B888278CF39 /* Debug */,
+				EFD45BEBA3F62B8A10BABA5D567FE881 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC80BBB5C066539FFFC0B2127CA5D3C4 /* Debug */,
+				1A41B15D3AA834993ADDD808FA9D8764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6007942803D7E29A79021D305B1D3734 /* Build configuration list for PBXNativeTarget "Zip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1FB3E7652829E555566FD66C2BC6ACC /* Debug */,
+				6F96F0C8C6A9DDABC6480FA989863756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D5BD6D5B2900D6EDEEE0A26245BBA73 /* Build configuration list for PBXNativeTarget "Pods-OrchardClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85120D92EFA8C342DED85EFCA0AC6A24 /* Debug */,
+				54FAFE78F3E6903FC9AC6B3E4AF54293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

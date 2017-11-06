@@ -1,0 +1,6 @@
+framework module Pods_OrchardClient {
+  umbrella header "Pods-OrchardClient-umbrella.h"
+
+  export *
+  module * { export * }
+}
