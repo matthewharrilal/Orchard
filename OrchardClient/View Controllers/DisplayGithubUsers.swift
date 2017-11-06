@@ -28,7 +28,9 @@ class DisplayGithubUsers: UITableViewController {
             self.usersLogin.append((user?.login)!)
             self.usersProfileImage.append((user?.avatarUrl)!)
             
-            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -36,10 +38,11 @@ class DisplayGithubUsers: UITableViewController {
         super.viewDidLoad()
         self.downloadProfileImageInstance.downloadProfileImage(httpMethod: .get) { (url) in
             let caches = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
-            let cacheURL = URL(string: caches)
-            let directory = try? FileManager.default.copyItem(atPath: String(describing: url), toPath: String(describing: cacheURL))
-            print(directory)
-
+            var cacheURL = URL(fileURLWithPath: caches)
+            cacheURL.appendPathComponent("tmp")
+            let directory = try? FileManager.default.moveItem(at: url!, to: cacheURL)
+            print("This is the directory \(directory)")
+            print(cacheURL)
         }
     
         self.tableView.reloadData()
