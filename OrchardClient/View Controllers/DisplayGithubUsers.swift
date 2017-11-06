@@ -36,16 +36,10 @@ class DisplayGithubUsers: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.downloadProfileImageInstance.downloadProfileImage(httpMethod: .get) { (url) in
-            let caches = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
-            var cacheURL = URL(fileURLWithPath: caches)
-            cacheURL.appendPathComponent("tmp")
-            let directory = try? FileManager.default.moveItem(at: url!, to: cacheURL)
-            print("This is the directory \(directory)")
-            print(cacheURL)
-        }
+        let caches = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
+        var cacheURL = URL(fileURLWithPath: caches)
+        print(cacheURL)
     
-        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,12 +50,30 @@ class DisplayGithubUsers: UITableViewController {
         return usersLogin.count
     }
     
+    func getImage() ->URL{
+        let caches = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
+        var cacheURL = URL(fileURLWithPath: caches)
+        self.downloadProfileImageInstance.downloadProfileImage(httpMethod: .get) { (url) in
+           
+            cacheURL.appendPathComponent("tmp")
+            let directory = try? FileManager.default.moveItem(at: url!, to: cacheURL)
+            
+        }
+        print(cacheURL)
+        return cacheURL
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let userEmail = usersEmail[indexPath.row]
         let userLogin = usersLogin[indexPath.row]
         cell.textLabel?.text = userLogin
         cell.detailTextLabel?.text = userEmail
+        let imageData = try? Data(contentsOf: getImage())
+        DispatchQueue.main.async {
+          cell.imageView?.image = UIImage(data: imageData!)
+            self.tableView.reloadData()
+        }
         
         return cell
     }
