@@ -27,6 +27,7 @@ class FindGithubUsers: UIViewController {
         Constant.username1 = user
         networkingInstance.network(route: .users(), requestRoute: .get) { (data, response) in
                 let users = try? JSONDecoder().decode(GithubUser.self, from: data)
+//            ImageLink.imageLink = (users?.avatarUrl)!
             print("This is the users email \(String(describing: users?.email))")
             print("This is the users login \(String(describing: users?.login))")
             print("This is the users profile picture address \(String(describing: users?.avatarUrl))")

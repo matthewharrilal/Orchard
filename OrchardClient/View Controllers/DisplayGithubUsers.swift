@@ -38,8 +38,8 @@ class DisplayGithubUsers: UITableViewController {
         super.viewDidLoad()
         let caches = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
         var cacheURL = URL(fileURLWithPath: caches)
-        print(cacheURL)
-    
+        print(getImage())
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,12 +54,10 @@ class DisplayGithubUsers: UITableViewController {
         let caches = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
         var cacheURL = URL(fileURLWithPath: caches)
         self.downloadProfileImageInstance.downloadProfileImage(httpMethod: .get) { (url) in
-           
-            cacheURL.appendPathComponent("tmp")
-            let directory = try? FileManager.default.moveItem(at: url!, to: cacheURL)
             
+            cacheURL.appendPathComponent("tmp")
+              let directory = try? FileManager.default.moveItem(at: url!, to: cacheURL)
         }
-        print(cacheURL)
         return cacheURL
     }
     
@@ -69,9 +67,12 @@ class DisplayGithubUsers: UITableViewController {
         let userLogin = usersLogin[indexPath.row]
         cell.textLabel?.text = userLogin
         cell.detailTextLabel?.text = userEmail
-        let imageData = try? Data(contentsOf: getImage())
+        
+        let contentsOfDirectory = try? FileManager.default.contentsOfDirectory(at: getImage() , includingPropertiesForKeys: [], options: .skipsHiddenFiles)[2]
+
+        let imageData = try? Data(contentsOf: contentsOfDirectory!)
         DispatchQueue.main.async {
-          cell.imageView?.image = UIImage(data: imageData!)
+            cell.imageView?.image = UIImage(data: imageData!)
             self.tableView.reloadData()
         }
         

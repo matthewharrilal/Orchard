@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 import Zip
 
+struct ImageLink {
+   static var imageLink = ""
+}
+
 enum HttpMethods: String {
     case get = "GET"
     case post = "POST"
@@ -29,8 +33,10 @@ class DownloadProfileImage {
         githubUserInstance.network(route: .users(), requestRoute: .get) { (data, response) in
             var user = try? JSONDecoder().decode(GithubUser.self, from: data)
             print(user?.avatarUrl)
-            user?.avatarUrl = self.profileImageUrl
+//            ImageLink.imageLink = (user?.avatarUrl)!
+//            self.profileImageUrl = ImageLink.imageLink
         }
+       
         self.session.downloadTask(with: URLRequest(url: URL(string: profileImageUrl)!)) { (url, response, error) in
             if let url = url {
                 completionHandler(url)
