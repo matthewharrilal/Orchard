@@ -67,18 +67,21 @@ class DisplayGithubUsers: UITableViewController {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let userEmail = usersEmail[indexPath.row]
         let userLogin = usersLogin[indexPath.row]
+        let profileImage = usersProfileImage[indexPath.row]
         cell.textLabel?.text = userLogin
         cell.detailTextLabel?.text = userEmail
-        
-        let contentsOfDirectory = try? FileManager.default.contentsOfDirectory(at: getImage() , includingPropertiesForKeys: [], options: .skipsHiddenFiles)[2]
-
-        if contentsOfDirectory != nil {
-        let imageData = try? Data(contentsOf: contentsOfDirectory!)
-
-            cell.imageView?.image = UIImage(data: imageData!)
-//            self.tableView.reloadData()
-        
+         let url = URL(string: profileImage) 
+        if url != nil {
+            URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                if let data = data {
+                    DispatchQueue.main.async {
+                        cell.imageView?.image = UIImage(data: data)
+                        self.tableView.reloadData()
+                    }
+                }
+            }).resume()
         }
+        
         return cell
     }
 }
