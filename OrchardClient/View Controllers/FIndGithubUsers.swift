@@ -28,14 +28,21 @@ class FindGithubUsers: UIViewController {
         guard let user = findUserTextField.text else {return}
 
         let displayUsers = DisplayGithubUsers()
-        displayUsers.username = user
         
         networkingInstance.network(route: .users(username: findUserTextField.text!), requestRoute: .get) { (data, response) in
             let newUsers = try? JSONDecoder().decode(GithubUserArray.self, from: data)
             guard let users1 = newUsers?.items else{return}
             displayUsers.usersArray = users1
+             displayUsers.usernameText = user
             
         }
         self.performSegue(withIdentifier: "displayGithubUser", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "displayGithubUser" {
+            let displayGithubUserTVC = segue.destination as? DisplayGithubUsers
+            displayGithubUserTVC?.usernameText = findUserTextField.text!
+        }
     }
 }

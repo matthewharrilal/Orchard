@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C0318F01FB0B7F5004CF2B4 /* DownloadProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0318EF1FB0B7F5004CF2B4 /* DownloadProfileImage.swift */; };
 		1C0318F21FB0BE60004CF2B4 /* DisplayGithubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0318F11FB0BE60004CF2B4 /* DisplayGithubUsers.swift */; };
+		1C1633711FB3A66A00EA4B4A /* noImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C1633701FB3A66A00EA4B4A /* noImage.png */; };
 		1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F21F9C60F500553C5A /* AppDelegate.swift */; };
 		1C8DA2F51F9C60F500553C5A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */; };
 		1C8DA2F81F9C60F500553C5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F61F9C60F500553C5A /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		1C0318EF1FB0B7F5004CF2B4 /* DownloadProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadProfileImage.swift; sourceTree = "<group>"; };
 		1C0318F11FB0BE60004CF2B4 /* DisplayGithubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayGithubUsers.swift; sourceTree = "<group>"; };
+		1C1633701FB3A66A00EA4B4A /* noImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImage.png; sourceTree = "<group>"; };
 		1C8DA2EF1F9C60F500553C5A /* OrchardClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrchardClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8DA2F21F9C60F500553C5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		1CF05EB21F9F1AEB0093B8C7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1C1633701FB3A66A00EA4B4A /* noImage.png */,
 				1C8DA30B1F9D5FCB00553C5A /* Alerts.swift */,
 				1C8DA3071F9C6F4400553C5A /* BasicAuth.swift */,
 			);
@@ -219,6 +222,7 @@
 				1C8DA2FD1F9C60F500553C5A /* LaunchScreen.storyboard in Resources */,
 				1C8DA2FA1F9C60F500553C5A /* Assets.xcassets in Resources */,
 				1C8DA2F81F9C60F500553C5A /* Main.storyboard in Resources */,
+				1C1633711FB3A66A00EA4B4A /* noImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

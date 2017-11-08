@@ -16,25 +16,14 @@ class DisplayGithubUsers: UITableViewController {
     let downloadProfileImageInstance = DownloadProfileImage()
     
     
-    var username = "matthew"
+    var usernameText = ""
     var usersArray = [GithubUser]()
     
     
-    func getImage() ->URL{
-        let caches = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
-        var cacheURL = URL(fileURLWithPath: caches)
-        self.downloadProfileImageInstance.downloadProfileImage(httpMethod: .get) { (url) in
-            
-            cacheURL.appendPathComponent("tmp")
-            let directory = try? FileManager.default.moveItem(at: url!, to: cacheURL)
-        }
-        print("This is the cache url \(cacheURL)")
-        return cacheURL
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        githubNetworkInstance.network(route: .users(username: "matthewharrilal" ), requestRoute: .get) { (data, response) in
+        githubNetworkInstance.network(route: .users(username: usernameText), requestRoute: .get) { (data, response) in
+            print(self.usernameText)
             let user = try? JSONDecoder().decode(GithubUserArray.self, from: data)
             guard let userName = user?.items else {return}
             self.usersArray = userName
@@ -42,8 +31,6 @@ class DisplayGithubUsers: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-        
-        getImage()
     }
     
     override func viewDidLoad() {
@@ -62,12 +49,9 @@ class DisplayGithubUsers: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        let userEmail = usersEmail[indexPath.row]
-//        let userLogin = usersLogin[indexPath.row]
-//        let profileImage = usersProfileImage[indexPath.row]
         let user = usersArray[indexPath.row]
         cell.textLabel?.text = user.login
-        cell.detailTextLabel?.text = user.email
+        cell.detailTextLabel?.text = user.avatarUrl
         let url = URL(string: user.avatarUrl!)
         if url != nil {
             URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
@@ -75,6 +59,11 @@ class DisplayGithubUsers: UITableViewController {
                     DispatchQueue.main.async {
                         cell.imageView?.image = UIImage(data: data)
                         self.tableView.reloadData()
+                    }
+                    
+                } else {
+                    DispatchQueue.main.async {
+                        cell.imageView?.image = UIImage(named: "noImage.png")
                     }
                 }
             }).resume()
