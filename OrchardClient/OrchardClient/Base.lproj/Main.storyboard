@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
-        <!--DisplayGithubUsers-->
+        <!--FindGithubUsers-->
         <scene sceneID="dor-gZ-aZS">
             <objects>
-                <viewController storyboardIdentifier="DisplayGithubUsers" title="DisplayGithubUsers" id="Mfy-ub-bp2" customClass="FindGithubUsers" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindGithubUsers" title="FindGithubUsers" id="Mfy-ub-bp2" customClass="FindGithubUsers" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aT6-GN-8v2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

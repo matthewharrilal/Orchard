@@ -50,7 +50,6 @@ class DisplayGithubUsers: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,7 +69,7 @@ class DisplayGithubUsers: UITableViewController {
         let profileImage = usersProfileImage[indexPath.row]
         cell.textLabel?.text = userLogin
         cell.detailTextLabel?.text = userEmail
-         let url = URL(string: profileImage) 
+        let url = URL(string: profileImage)
         if url != nil {
             URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
                 if let data = data {

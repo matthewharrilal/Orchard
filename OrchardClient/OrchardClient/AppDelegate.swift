@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
          var mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         if UserDefaults.standard.bool(forKey: "LoggedIn") == true {
-             let viewController2 = mainStoryboard.instantiateViewController(withIdentifier: "DisplayGithubUsers")
+             let viewController2 = mainStoryboard.instantiateViewController(withIdentifier: "FindGithubUsers")
                 window?.rootViewController = viewController2
         }
         return true
