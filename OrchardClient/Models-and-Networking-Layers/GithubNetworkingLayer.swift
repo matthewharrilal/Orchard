@@ -18,26 +18,29 @@ struct Constant
 }
 
 enum GithubRoutes {
-    case users()
+    case users(username: String)
     
     func path() -> String {
-//       This represents the possible routes the user can take when verified and is querying the github api
+        //       This represents the possible routes the user can take when verified and is querying the github api
         switch self {
-//        case .users:
-//            return "/users\(self.users.username)"
+            //        case .users:
+        //            return "/users\(self.users.username)"
         case .users:
             DispatchQueue.main.async {
                 print("The username the user has typed in is \(Constant.username1)")
             }
-            return "/users/\(Constant.username1)"
-//            return "/users/elmerastudillo"
+            return "/search/users"
+            //            return "/users/elmerastudillo"
         }
     }
     
     func urlParameters() -> [String: String] {
         switch self {
         case .users(let username):
-            let userParameters = ["users": String(describing: username)]
+            let userParameters = ["q": String(describing: username),
+                                  "repos": "%3E42",
+                                  "followers": "%3E1000"]
+            
             return userParameters
         }
     }
@@ -57,13 +60,13 @@ enum DifferentHttpMethods: String {
 }
 
 class GithubNetworkingLayer {
-//  This is essentially the base url we are hitting when we make the network request
-   var baseURL = "https://api.github.com"
+    //  This is essentially the base url we are hitting when we make the network request
+    var baseURL = "https://api.github.com"
     
     func network(route: GithubRoutes, requestRoute: DifferentHttpMethods, completionHandler: @escaping (Data, Int) -> Void) {
         var fullUrlString = URL(string: baseURL.appending(route.path()))
-//        fullUrlString?.appendingQueryParameters(route.urlParameters())
-        var getRequest = URLRequest(url: fullUrlString!)
+       var newString =  fullUrlString?.appendingQueryParameters(route.urlParameters())
+        var getRequest = URLRequest(url: newString!)
         getRequest.httpMethod = requestRoute.rawValue
         getRequest.allHTTPHeaderFields = route.urlHeaders()
         session.dataTask(with: getRequest) { (data, response, error) in
@@ -71,7 +74,7 @@ class GithubNetworkingLayer {
             if let data = data {
                 completionHandler(data, statusCode)
             }
-        }.resume()
+            }.resume()
     }
     
 }

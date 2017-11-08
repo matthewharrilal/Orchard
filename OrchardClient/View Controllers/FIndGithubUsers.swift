@@ -14,6 +14,8 @@ class FindGithubUsers: UIViewController {
     
     @IBOutlet weak var findUserTextField: UITextField!
     
+    var usersArray = [GithubUser]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +26,15 @@ class FindGithubUsers: UIViewController {
     
     @IBAction func findUserButton(_ sender: Any) {
         guard let user = findUserTextField.text else {return}
-        Constant.username1 = user
-        networkingInstance.network(route: .users(), requestRoute: .get) { (data, response) in
-                let users = try? JSONDecoder().decode(GithubUser.self, from: data)
-//            ImageLink.imageLink = (users?.avatarUrl)!
-            print("This is the users email \(String(describing: users?.email))")
-            print("This is the users login \(String(describing: users?.login))")
-            print("This is the users profile picture address \(String(describing: users?.avatarUrl))")
+
+        let displayUsers = DisplayGithubUsers()
+        displayUsers.username = user
+        
+        networkingInstance.network(route: .users(username: findUserTextField.text!), requestRoute: .get) { (data, response) in
+            let newUsers = try? JSONDecoder().decode(GithubUserArray.self, from: data)
+            guard let users1 = newUsers?.items else{return}
+            displayUsers.usersArray = users1
+            
         }
         self.performSegue(withIdentifier: "displayGithubUser", sender: nil)
     }

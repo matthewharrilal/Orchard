@@ -35,3 +35,7 @@ extension GithubUser {
         self.init(login: login, email: email, avatarUrl: avatarUrl)
     }
 }
+
+struct GithubUserArray: Decodable {
+    let items: [GithubUser]
+}

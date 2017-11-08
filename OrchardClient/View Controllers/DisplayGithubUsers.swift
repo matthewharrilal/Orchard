@@ -16,9 +16,9 @@ class DisplayGithubUsers: UITableViewController {
     let downloadProfileImageInstance = DownloadProfileImage()
     
     
-    var usersEmail = [String]()
-    var usersLogin = [String]()
-    var usersProfileImage = [String]()
+    var username = "matthew"
+    var usersArray = [GithubUser]()
+    
     
     func getImage() ->URL{
         let caches = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
@@ -34,12 +34,10 @@ class DisplayGithubUsers: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        githubNetworkInstance.network(route: .users(), requestRoute: .get) { (data, response) in
-            let user = try? JSONDecoder().decode(GithubUser.self, from: data)
-            self.usersEmail.append((user?.email)!)
-            self.usersLogin.append((user?.login)!)
-            self.usersProfileImage.append((user?.avatarUrl)!)
-            
+        githubNetworkInstance.network(route: .users(username: "matthewharrilal" ), requestRoute: .get) { (data, response) in
+            let user = try? JSONDecoder().decode(GithubUserArray.self, from: data)
+            guard let userName = user?.items else {return}
+            self.usersArray = userName
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -57,19 +55,20 @@ class DisplayGithubUsers: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return usersLogin.count
+        return usersArray.count
     }
     
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let userEmail = usersEmail[indexPath.row]
-        let userLogin = usersLogin[indexPath.row]
-        let profileImage = usersProfileImage[indexPath.row]
-        cell.textLabel?.text = userLogin
-        cell.detailTextLabel?.text = userEmail
-        let url = URL(string: profileImage)
+//        let userEmail = usersEmail[indexPath.row]
+//        let userLogin = usersLogin[indexPath.row]
+//        let profileImage = usersProfileImage[indexPath.row]
+        let user = usersArray[indexPath.row]
+        cell.textLabel?.text = user.login
+        cell.detailTextLabel?.text = user.email
+        let url = URL(string: user.avatarUrl!)
         if url != nil {
             URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
                 if let data = data {
