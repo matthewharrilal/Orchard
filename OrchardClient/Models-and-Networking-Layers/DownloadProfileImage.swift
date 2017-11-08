@@ -33,11 +33,11 @@ class DownloadProfileImage {
         githubUserInstance.network(route: .users(), requestRoute: .get) { (data, response) in
             var user = try? JSONDecoder().decode(GithubUser.self, from: data)
             print(user?.avatarUrl)
-//            ImageLink.imageLink = (user?.avatarUrl)!
+            ImageLink.imageLink = (user?.avatarUrl)!
 //            self.profileImageUrl = ImageLink.imageLink
         }
        
-        self.session.downloadTask(with: URLRequest(url: URL(string: profileImageUrl)!)) { (url, response, error) in
+        self.session.downloadTask(with: URLRequest(url: URL(string: ImageLink.imageLink)!)) { (url, response, error) in
             if let url = url {
                 completionHandler(url)
             }

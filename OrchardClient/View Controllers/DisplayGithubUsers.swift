@@ -71,10 +71,10 @@ class DisplayGithubUsers: UITableViewController {
         let contentsOfDirectory = try? FileManager.default.contentsOfDirectory(at: getImage() , includingPropertiesForKeys: [], options: .skipsHiddenFiles)[2]
 
         let imageData = try? Data(contentsOf: contentsOfDirectory!)
-        DispatchQueue.main.async {
+
             cell.imageView?.image = UIImage(data: imageData!)
-            self.tableView.reloadData()
-        }
+//            self.tableView.reloadData()
+        
         
         return cell
     }
