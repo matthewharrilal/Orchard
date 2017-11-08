@@ -11,7 +11,7 @@ import UIKit
 import Zip
 
 struct ImageLink {
-   static var imageLink = ""
+    static var imageLink = ""
 }
 
 enum HttpMethods: String {
@@ -21,8 +21,6 @@ enum HttpMethods: String {
 }
 
 class DownloadProfileImage {
-    
-    var profileImageUrl = "https://avatars3.githubusercontent.com/u/30048602?v=4"
     
     var session = URLSession.shared
     
@@ -34,14 +32,16 @@ class DownloadProfileImage {
             var user = try? JSONDecoder().decode(GithubUser.self, from: data)
             print(user?.avatarUrl)
             ImageLink.imageLink = (user?.avatarUrl)!
-//            self.profileImageUrl = ImageLink.imageLink
+            //            self.profileImageUrl = ImageLink.imageLink
+            
+            self.session.downloadTask(with: URLRequest(url: URL(string: ImageLink.imageLink)!)) { (url, response, error) in
+                if let url = url {
+                    completionHandler(url)
+                }
+                }.resume()
         }
-       
-        self.session.downloadTask(with: URLRequest(url: URL(string: ImageLink.imageLink)!)) { (url, response, error) in
-            if let url = url {
-                completionHandler(url)
-            }
-        }.resume()
+        
+        
     }
 }
 

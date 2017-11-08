@@ -20,6 +20,18 @@ class DisplayGithubUsers: UITableViewController {
     var usersLogin = [String]()
     var usersProfileImage = [String]()
     
+    func getImage() ->URL{
+        let caches = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
+        var cacheURL = URL(fileURLWithPath: caches)
+        self.downloadProfileImageInstance.downloadProfileImage(httpMethod: .get) { (url) in
+            
+            cacheURL.appendPathComponent("tmp")
+            let directory = try? FileManager.default.moveItem(at: url!, to: cacheURL)
+        }
+        print("This is the cache url \(cacheURL)")
+        return cacheURL
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         githubNetworkInstance.network(route: .users(), requestRoute: .get) { (data, response) in
@@ -32,13 +44,12 @@ class DisplayGithubUsers: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        
+        getImage()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let caches = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
-        var cacheURL = URL(fileURLWithPath: caches)
-        print(getImage())
         
     }
     
@@ -50,16 +61,7 @@ class DisplayGithubUsers: UITableViewController {
         return usersLogin.count
     }
     
-    func getImage() ->URL{
-        let caches = (NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
-        var cacheURL = URL(fileURLWithPath: caches)
-        self.downloadProfileImageInstance.downloadProfileImage(httpMethod: .get) { (url) in
-            
-            cacheURL.appendPathComponent("tmp")
-              let directory = try? FileManager.default.moveItem(at: url!, to: cacheURL)
-        }
-        return cacheURL
-    }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -70,12 +72,13 @@ class DisplayGithubUsers: UITableViewController {
         
         let contentsOfDirectory = try? FileManager.default.contentsOfDirectory(at: getImage() , includingPropertiesForKeys: [], options: .skipsHiddenFiles)[2]
 
+        if contentsOfDirectory != nil {
         let imageData = try? Data(contentsOf: contentsOfDirectory!)
 
             cell.imageView?.image = UIImage(data: imageData!)
 //            self.tableView.reloadData()
         
-        
+        }
         return cell
     }
 }
