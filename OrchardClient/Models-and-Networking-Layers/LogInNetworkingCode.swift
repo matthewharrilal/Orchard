@@ -38,7 +38,7 @@ enum HttpsMethods: String {
 class LogInNetworkingLayer {
     let session = URLSession.shared
     func network(route: Route, user: User? = nil, requestRoute: HttpsMethods, completionHandler: @escaping (Data, Int) -> Void) {
-        let baseURL = "http://10.205.202.155:5000"
+        let baseURL = "http://127.0.0.1:5000"
         let fullUrl = URL(string: baseURL.appending(route.path()))
         var request = URLRequest(url: fullUrl!)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
