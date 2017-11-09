@@ -14,7 +14,9 @@ class DisplayGithubUserCollectionView: UICollectionViewController {
     let githubNetworkingInstance = GithubNetworkingLayer()
     var usernameText = ""
     
-    var usersArray = [GithubUser]() 
+    var usersArray = [GithubUser]()
+    
+    let cellScaling: CGFloat = 0.6
       
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +33,18 @@ class DisplayGithubUserCollectionView: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Configuring the cell
+        
+        let screenSize = UIScreen.main.bounds.size
+        let cellWidth = floor(screenSize.width * cellScaling)
+        let cellHeight = floor(screenSize.height * cellScaling)
+        let insetX = (view.bounds.width - cellWidth) / 2.0
+        let insetY = (view.bounds.height - cellHeight) / 2.0
+        let layout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        collectionView?.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
+        
+        collectionView?.dataSource = self
     }
     
     override func didReceiveMemoryWarning() {
