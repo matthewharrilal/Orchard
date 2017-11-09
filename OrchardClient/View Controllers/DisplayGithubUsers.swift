@@ -48,17 +48,17 @@ class DisplayGithubUsers: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DisplayUsersTableViewCell
         let user = usersArray[indexPath.row]
-        cell.textLabel?.text = user.login
+        cell.userLoginLabel.text = user.login
         cell.detailTextLabel?.text = user.avatarUrl
         let url = URL(string: user.avatarUrl!)
         if url != nil {
             URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
                 if let data = data {
                     DispatchQueue.main.async {
-                        cell.imageView?.image = UIImage(data: data)
-                        self.tableView.reloadData()
+                        cell.displayUsersImageView.image = UIImage(data: data)
+//                        self.tableView.reloadData()
                     }
                     
                 } else {
