@@ -91,12 +91,73 @@
                     </view>
                     <connections>
                         <outlet property="findUserTextField" destination="xqq-ww-rp0" id="KIw-pV-3lG"/>
-                        <segue destination="WhU-e1-SHn" kind="show" identifier="displayGithubUser" id="eQx-gP-m4o"/>
+                        <segue destination="xXb-4T-I2S" kind="show" identifier="displayGithubUser" id="IwB-2t-8Iu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vy6-QS-NYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1293.5999999999999" y="143.47826086956522"/>
+        </scene>
+        <!--Display Github User Collection View-->
+        <scene sceneID="8bq-dN-iSA">
+            <objects>
+                <collectionViewController id="xXb-4T-I2S" customClass="DisplayGithubUserCollectionView" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="1bT-82-f0C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Aeo-EU-Oue">
+                            <size key="itemSize" width="158" height="177"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="4cG-3d-VuZ" customClass="DisplayGithubUserCollectionViewCell" customModule="OrchardClient" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="158" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="158" height="177"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d16-il-mce">
+                                            <rect key="frame" x="0.0" y="0.0" width="158" height="122"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWx-cm-0z6">
+                                            <rect key="frame" x="0.0" y="136" width="158" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="d16-il-mce" firstAttribute="top" secondItem="4cG-3d-VuZ" secondAttribute="top" id="Cen-K0-5q7"/>
+                                    <constraint firstAttribute="trailing" secondItem="d16-il-mce" secondAttribute="trailing" id="IDP-wD-FUa"/>
+                                    <constraint firstItem="aWx-cm-0z6" firstAttribute="centerY" secondItem="4cG-3d-VuZ" secondAttribute="centerY" constant="68" id="ITu-hd-M7p"/>
+                                    <constraint firstItem="aWx-cm-0z6" firstAttribute="leading" secondItem="4cG-3d-VuZ" secondAttribute="leading" id="fDd-KT-Hfe"/>
+                                    <constraint firstItem="aWx-cm-0z6" firstAttribute="top" secondItem="4cG-3d-VuZ" secondAttribute="top" constant="136" id="jLY-ER-v0n"/>
+                                    <constraint firstItem="d16-il-mce" firstAttribute="centerX" secondItem="4cG-3d-VuZ" secondAttribute="centerX" id="o69-kO-3ho"/>
+                                    <constraint firstItem="d16-il-mce" firstAttribute="centerY" secondItem="4cG-3d-VuZ" secondAttribute="centerY" constant="-27.5" id="qSH-A2-aal"/>
+                                    <constraint firstAttribute="trailing" secondItem="aWx-cm-0z6" secondAttribute="trailing" id="qif-jv-C6K"/>
+                                    <constraint firstItem="d16-il-mce" firstAttribute="leading" secondItem="4cG-3d-VuZ" secondAttribute="leading" id="v0d-93-YfH"/>
+                                    <constraint firstItem="aWx-cm-0z6" firstAttribute="centerX" secondItem="4cG-3d-VuZ" secondAttribute="centerX" id="wcS-Gh-qHW"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="githubUserImageVIew" destination="d16-il-mce" id="Pzc-wB-TDL"/>
+                                    <outlet property="userLoginLabel" destination="aWx-cm-0z6" id="IEq-fL-Kbk"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="xXb-4T-I2S" id="f1z-LH-aAi"/>
+                            <outlet property="delegate" destination="xXb-4T-I2S" id="HIb-sD-Vib"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abu-HB-ygN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2199.1999999999998" y="148.87556221889056"/>
         </scene>
         <!--Display Github Users-->
         <scene sceneID="OT1-Un-Dpm">
@@ -136,7 +197,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="displayUsersImageView" destination="diJ-0X-pl8" id="f3S-RR-MjH"/>
-                                    <outlet property="userDetailedLabel" destination="Fpn-4V-zHC" id="FxT-cN-IDo"/>
                                     <outlet property="userLoginLabel" destination="dQg-pY-GYU" id="reM-qc-kw6"/>
                                 </connections>
                             </tableViewCell>
@@ -149,7 +209,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eko-Si-LuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2116" y="144.3778110944528"/>
+            <point key="canvasLocation" x="2177" y="864"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="djf-PB-Bq2">

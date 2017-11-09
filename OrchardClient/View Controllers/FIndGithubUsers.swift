@@ -27,7 +27,7 @@ class FindGithubUsers: UIViewController {
     @IBAction func findUserButton(_ sender: Any) {
         guard let user = findUserTextField.text else {return}
 
-        let displayUsers = DisplayGithubUsers()
+        let displayUsers = DisplayGithubUserCollectionView()
         
         networkingInstance.network(route: .users(username: findUserTextField.text!), requestRoute: .get) { (data, response) in
             let newUsers = try? JSONDecoder().decode(GithubUserArray.self, from: data)
@@ -41,7 +41,7 @@ class FindGithubUsers: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "displayGithubUser" {
-            let displayGithubUserTVC = segue.destination as? DisplayGithubUsers
+            let displayGithubUserTVC = segue.destination as? DisplayGithubUserCollectionView
             displayGithubUserTVC?.usernameText = findUserTextField.text!
         }
     }
