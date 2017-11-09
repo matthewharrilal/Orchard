@@ -25,8 +25,8 @@ def authenticated_request(func):
     def wrapper(*args, **kwargs):
         auth = request.authorization
         # pdb.set_trace()
-#        auth_code = request.headers['authorization']
-#        email, password = decode(auth_code)
+        auth_code = request.headers['Authorization']
+        email, password = decode(auth_code)
         if email is not None and password is not None:
             user_collection = database.orchard_collection
             user = user_collection.find_one({'email': email})
