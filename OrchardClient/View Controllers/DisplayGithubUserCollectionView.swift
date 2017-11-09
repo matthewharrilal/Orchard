@@ -29,11 +29,6 @@ class DisplayGithubUserCollectionView: UICollectionViewController {
                 self.collectionView?.reloadData()
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //Configuring the cell
         
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = floor(screenSize.width * cellScaling)
@@ -47,6 +42,11 @@ class DisplayGithubUserCollectionView: UICollectionViewController {
         collectionView?.dataSource = self
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //Configuring the cell
+     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -59,6 +59,7 @@ class DisplayGithubUserCollectionView: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! DisplayGithubUserCollectionViewCell
         let user = usersArray[indexPath.row]
         cell.userLoginLabel.text = user.login
+
         let url = URL(string: user.avatarUrl!)
         if url != nil {
             URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in

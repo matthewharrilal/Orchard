@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -105,44 +106,48 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="1bT-82-f0C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Aeo-EU-Oue">
-                            <size key="itemSize" width="158" height="177"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Aeo-EU-Oue">
+                            <size key="itemSize" width="158" height="389"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="4cG-3d-VuZ" customClass="DisplayGithubUserCollectionViewCell" customModule="OrchardClient" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="158" height="177"/>
+                                <rect key="frame" x="0.0" y="101.5" width="200" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="158" height="177"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d16-il-mce">
-                                            <rect key="frame" x="0.0" y="0.0" width="158" height="122"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="345"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWx-cm-0z6">
-                                            <rect key="frame" x="0.0" y="136" width="158" height="41"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <rect key="frame" x="13" y="353" width="174" height="27"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="27" id="uYV-av-srV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                 <constraints>
-                                    <constraint firstItem="d16-il-mce" firstAttribute="top" secondItem="4cG-3d-VuZ" secondAttribute="top" id="Cen-K0-5q7"/>
-                                    <constraint firstAttribute="trailing" secondItem="d16-il-mce" secondAttribute="trailing" id="IDP-wD-FUa"/>
-                                    <constraint firstItem="aWx-cm-0z6" firstAttribute="centerY" secondItem="4cG-3d-VuZ" secondAttribute="centerY" constant="68" id="ITu-hd-M7p"/>
-                                    <constraint firstItem="aWx-cm-0z6" firstAttribute="leading" secondItem="4cG-3d-VuZ" secondAttribute="leading" id="fDd-KT-Hfe"/>
-                                    <constraint firstItem="aWx-cm-0z6" firstAttribute="top" secondItem="4cG-3d-VuZ" secondAttribute="top" constant="136" id="jLY-ER-v0n"/>
-                                    <constraint firstItem="d16-il-mce" firstAttribute="centerX" secondItem="4cG-3d-VuZ" secondAttribute="centerX" id="o69-kO-3ho"/>
-                                    <constraint firstItem="d16-il-mce" firstAttribute="centerY" secondItem="4cG-3d-VuZ" secondAttribute="centerY" constant="-27.5" id="qSH-A2-aal"/>
-                                    <constraint firstAttribute="trailing" secondItem="aWx-cm-0z6" secondAttribute="trailing" id="qif-jv-C6K"/>
-                                    <constraint firstItem="d16-il-mce" firstAttribute="leading" secondItem="4cG-3d-VuZ" secondAttribute="leading" id="v0d-93-YfH"/>
-                                    <constraint firstItem="aWx-cm-0z6" firstAttribute="centerX" secondItem="4cG-3d-VuZ" secondAttribute="centerX" id="wcS-Gh-qHW"/>
+                                    <constraint firstAttribute="trailing" secondItem="d16-il-mce" secondAttribute="trailing" id="17W-v7-phU"/>
+                                    <constraint firstItem="aWx-cm-0z6" firstAttribute="leading" secondItem="4cG-3d-VuZ" secondAttribute="leadingMargin" constant="5" id="8xx-OQ-XIa"/>
+                                    <constraint firstItem="aWx-cm-0z6" firstAttribute="centerX" secondItem="d16-il-mce" secondAttribute="centerX" id="98u-BX-u4a"/>
+                                    <constraint firstItem="d16-il-mce" firstAttribute="leading" secondItem="4cG-3d-VuZ" secondAttribute="leading" id="UZA-FV-iNE"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="aWx-cm-0z6" secondAttribute="bottom" constant="12" id="aVA-Pf-VnS"/>
+                                    <constraint firstItem="aWx-cm-0z6" firstAttribute="top" secondItem="d16-il-mce" secondAttribute="bottom" constant="8" symbolic="YES" id="ubr-bZ-bx2"/>
+                                    <constraint firstItem="d16-il-mce" firstAttribute="top" secondItem="4cG-3d-VuZ" secondAttribute="top" id="zYb-Y5-wNK"/>
                                 </constraints>
+                                <size key="customSize" width="200" height="400"/>
                                 <connections>
                                     <outlet property="githubUserImageVIew" destination="d16-il-mce" id="Pzc-wB-TDL"/>
                                     <outlet property="userLoginLabel" destination="aWx-cm-0z6" id="IEq-fL-Kbk"/>
