@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              let viewController2 = mainStoryboard.instantiateViewController(withIdentifier: "FindGithubUsers")
                 window?.rootViewController = viewController2
         }
+        
+//        UIButton.appearance().tintColor = UIColor(hue: <#T##CGFloat#>, saturation: <#T##CGFloat#>, brightness: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+        
         return true
     }
     
