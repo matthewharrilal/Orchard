@@ -28,7 +28,7 @@ def authenticated_request(func):
         print('***********')
         print(request.authorization)
         print('***********')
-        auth_code = request.environ['HTTP_AUTHORIZATION']
+        auth_code = request.headers['authorization]
         email,password = decode(auth_code)
        
         if email is not None and password is not None:
@@ -71,7 +71,7 @@ class User(Resource):
             return(None, 404, None)
 
 
-    @authenticated_request
+#    @authenticated_request
     def get(self):
         # This is essentially the function that we are going to be using to fetch the users
 
