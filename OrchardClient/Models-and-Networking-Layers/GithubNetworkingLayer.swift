@@ -38,7 +38,7 @@ enum GithubRoutes {
         switch self {
         case .users(let username):
             let userParameters = ["q": String(describing: username),
-                                  "repos": "%3E42",
+                                  "repos": "%3E10",
                                   "followers": "%3E1000"]
             
             return userParameters
