@@ -18,8 +18,8 @@ class DisplayUsersTableViewCell: UITableViewCell {
     @IBOutlet weak var userDetailedLabel: UILabel!
     
     override func layoutSubviews() {
-        self.contentView.frame = self.bounds
-        self.imageView?.contentMode = .scaleAspectFit
+        displayUsersImageView.layer.cornerRadius = 30
+        displayUsersImageView.layer.masksToBounds = true
     }
     
     

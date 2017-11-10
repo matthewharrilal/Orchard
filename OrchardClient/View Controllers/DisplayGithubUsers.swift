@@ -59,6 +59,7 @@ class DisplayGithubUsers: UITableViewController {
                 if let data = data {
                     DispatchQueue.main.async {
                         cell.displayUsersImageView.image = UIImage(data: data)
+                    
 //                        self.tableView.reloadData()
                     }
                     
