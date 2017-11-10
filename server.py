@@ -25,6 +25,9 @@ def authenticated_request(func):
     def wrapper(*args, **kwargs):
         auth = request.authorization
         # pdb.set_trace()
+        print(***********)
+        print(request.headers)
+        print(***********)
         auth_code = request.headers.get(['authorization'])
         email = decode(auth_code)
         password = decode(auth_code)

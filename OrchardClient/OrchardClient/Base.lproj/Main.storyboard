@@ -92,7 +92,7 @@
                     </view>
                     <connections>
                         <outlet property="findUserTextField" destination="xqq-ww-rp0" id="KIw-pV-3lG"/>
-                        <segue destination="xXb-4T-I2S" kind="show" identifier="displayGithubUser" id="IwB-2t-8Iu"/>
+                        <segue destination="WhU-e1-SHn" kind="show" identifier="displayGithubUser" id="1O2-Y9-EFO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vy6-QS-NYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -116,7 +116,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="4cG-3d-VuZ" customClass="DisplayGithubUserCollectionViewCell" customModule="OrchardClient" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="101.5" width="200" height="400"/>
+                                <rect key="frame" x="0.0" y="133.5" width="200" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="400"/>
@@ -162,7 +162,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abu-HB-ygN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2199.1999999999998" y="148.87556221889056"/>
+            <point key="canvasLocation" x="969" y="-565"/>
         </scene>
         <!--Display Github Users-->
         <scene sceneID="OT1-Un-Dpm">
@@ -180,29 +180,42 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diJ-0X-pl8">
-                                            <rect key="frame" x="16" y="0.0" width="101" height="80"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpn-4V-zHC">
-                                            <rect key="frame" x="117" y="59" width="258" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wei-Mv-L61">
+                                            <rect key="frame" x="102" y="11" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="agr-Yi-1we"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQg-pY-GYU">
-                                            <rect key="frame" x="171" y="11" width="150" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfh-zJ-rIb">
+                                            <rect key="frame" x="102" y="51" width="284" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="diJ-0X-pl8">
+                                            <rect key="frame" x="16" y="7" width="78" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="78" id="BTI-xD-22L"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="diJ-0X-pl8" firstAttribute="top" secondItem="5F7-ZR-MkV" secondAttribute="topMargin" constant="-4" id="0u8-xQ-btf"/>
+                                        <constraint firstItem="wei-Mv-L61" firstAttribute="top" secondItem="5F7-ZR-MkV" secondAttribute="topMargin" id="9Oh-Fa-Kgc"/>
+                                        <constraint firstItem="kfh-zJ-rIb" firstAttribute="leading" secondItem="diJ-0X-pl8" secondAttribute="trailing" constant="8" symbolic="YES" id="ApK-7J-Faq"/>
+                                        <constraint firstItem="diJ-0X-pl8" firstAttribute="leading" secondItem="5F7-ZR-MkV" secondAttribute="leadingMargin" id="HZe-EF-QYV"/>
+                                        <constraint firstItem="diJ-0X-pl8" firstAttribute="bottom" secondItem="kfh-zJ-rIb" secondAttribute="bottom" id="amp-9K-x3Y"/>
+                                        <constraint firstItem="diJ-0X-pl8" firstAttribute="centerY" secondItem="5F7-ZR-MkV" secondAttribute="centerY" id="wa5-vU-O9S"/>
+                                        <constraint firstItem="wei-Mv-L61" firstAttribute="leading" secondItem="diJ-0X-pl8" secondAttribute="trailing" constant="8" symbolic="YES" id="zEm-dk-VUS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="displayUsersImageView" destination="diJ-0X-pl8" id="f3S-RR-MjH"/>
-                                    <outlet property="userLoginLabel" destination="dQg-pY-GYU" id="reM-qc-kw6"/>
+                                    <outlet property="userDetailedLabel" destination="kfh-zJ-rIb" id="ovg-az-jey"/>
+                                    <outlet property="userLoginLabel" destination="wei-Mv-L61" id="gzL-4j-o5V"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -214,7 +227,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eko-Si-LuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="864"/>
+            <point key="canvasLocation" x="2220" y="142.57871064467767"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="djf-PB-Bq2">

@@ -17,4 +17,11 @@ class DisplayUsersTableViewCell: UITableViewCell {
     @IBOutlet weak var userLoginLabel: UILabel!
     @IBOutlet weak var userDetailedLabel: UILabel!
     
+    override func layoutSubviews() {
+        self.contentView.frame = self.bounds
+        self.imageView?.contentMode = .scaleAspectFit
+    }
+    
+    
+    
 }

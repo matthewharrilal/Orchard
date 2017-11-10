@@ -52,6 +52,7 @@ class DisplayGithubUsers: UITableViewController {
         let user = usersArray[indexPath.row]
         cell.userLoginLabel.text = user.login
         cell.detailTextLabel?.text = user.avatarUrl
+        cell.displayUsersImageView.contentMode = .scaleAspectFit
         let url = URL(string: user.avatarUrl!)
         if url != nil {
             URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
