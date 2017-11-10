@@ -83,7 +83,7 @@ class User(Resource):
         user_find = orchard_collection.find_one({'email': "matthewharrilal"})
 
         # Now we esentially implement the error handling
-        if email is not None:
+        if user_find is not None:
             user_find.pop('password')
             print('The user has succesfully been fetched')
             return(user_find, 200, None)
