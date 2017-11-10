@@ -8,4 +8,5 @@ target 'OrchardClient' do
   # Pods for OrchardClient
 	  pod 'KeychainSwift'
       pod 'Zip'
+      pod 'SHSearchBar'
 end

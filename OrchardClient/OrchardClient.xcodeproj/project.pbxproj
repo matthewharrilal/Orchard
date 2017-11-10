@@ -13,6 +13,8 @@
 		1C2002791FB4A75900E6EA3D /* DisplayUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2002781FB4A75900E6EA3D /* DisplayUsersTableViewCell.swift */; };
 		1C20027B1FB4AAA000E6EA3D /* DisplayGithubUserCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C20027A1FB4AAA000E6EA3D /* DisplayGithubUserCollectionView.swift */; };
 		1C20027D1FB4AEEC00E6EA3D /* DisplayUsersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C20027C1FB4AEEC00E6EA3D /* DisplayUsersCollectionViewCell.swift */; };
+		1C20027F1FB626E600E6EA3D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C20027E1FB626E600E6EA3D /* SearchViewController.swift */; };
+		1C2002811FB626F000E6EA3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C2002801FB626F000E6EA3D /* Localizable.strings */; };
 		1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F21F9C60F500553C5A /* AppDelegate.swift */; };
 		1C8DA2F51F9C60F500553C5A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */; };
 		1C8DA2F81F9C60F500553C5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F61F9C60F500553C5A /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 		1C2002781FB4A75900E6EA3D /* DisplayUsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayUsersTableViewCell.swift; sourceTree = "<group>"; };
 		1C20027A1FB4AAA000E6EA3D /* DisplayGithubUserCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayGithubUserCollectionView.swift; sourceTree = "<group>"; };
 		1C20027C1FB4AEEC00E6EA3D /* DisplayUsersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayUsersCollectionViewCell.swift; sourceTree = "<group>"; };
+		1C20027E1FB626E600E6EA3D /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1C2002801FB626F000E6EA3D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1C8DA2EF1F9C60F500553C5A /* OrchardClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrchardClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8DA2F21F9C60F500553C5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 			children = (
 				1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */,
 				1CF05EB51F9F1FF70093B8C7 /* FIndGithubUsers.swift */,
+				1C2002801FB626F000E6EA3D /* Localizable.strings */,
+				1C20027E1FB626E600E6EA3D /* SearchViewController.swift */,
 				1CA523E51FA2E76D00E792A8 /* SignUpViewController.swift */,
 				1C0318F11FB0BE60004CF2B4 /* DisplayGithubUsers.swift */,
 				1C20027A1FB4AAA000E6EA3D /* DisplayGithubUserCollectionView.swift */,
@@ -228,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2002811FB626F000E6EA3D /* Localizable.strings in Resources */,
 				1C8DA2FD1F9C60F500553C5A /* LaunchScreen.storyboard in Resources */,
 				1C8DA2FA1F9C60F500553C5A /* Assets.xcassets in Resources */,
 				1C8DA2F81F9C60F500553C5A /* Main.storyboard in Resources */,
@@ -277,11 +284,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OrchardClient/Pods-OrchardClient-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SHSearchBar/SHSearchBar.framework",
 				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SHSearchBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +323,7 @@
 				1CA523E61FA2E76D00E792A8 /* SignUpViewController.swift in Sources */,
 				1C0318F01FB0B7F5004CF2B4 /* DownloadProfileImage.swift in Sources */,
 				1C8DA2F51F9C60F500553C5A /* LogInViewController.swift in Sources */,
+				1C20027F1FB626E600E6EA3D /* SearchViewController.swift in Sources */,
 				1C2002791FB4A75900E6EA3D /* DisplayUsersTableViewCell.swift in Sources */,
 				1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */,
 				1C8DA30A1F9C732B00553C5A /* LogInNetworkingCode.swift in Sources */,
