@@ -80,7 +80,7 @@ class User(Resource):
         # Essentially we need the credentials they are passing in the headers
 
         # Now we need to find the user in the database
-        user_find = orchard_collection.find_one({'email': "matthewharrilal@gmail.com"})
+        user_find = orchard_collection.find_one({'email': "larry@gmail.com"})
 
         # Now we esentially implement the error handling
         if user_find is not None:
