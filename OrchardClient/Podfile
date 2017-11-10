@@ -9,4 +9,5 @@ target 'OrchardClient' do
 	  pod 'KeychainSwift'
       pod 'Zip'
       pod 'SHSearchBar'
+	pod 'TextFieldEffects'
 end

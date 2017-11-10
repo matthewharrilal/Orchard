@@ -16,6 +16,13 @@ class LogInViewController: UIViewController {
     
     let networkingInstance = LogInNetworkingLayer()
     let alertInstance = Alert()
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
