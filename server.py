@@ -70,26 +70,26 @@ class User(Resource):
             print("An error has occured trying to implement this document")
             return(None, 404, None)
 
-
-    @authenticated_request
-    def get(self):
-        # This is essentially the function that we are going to be using to fetch the users
-
-        # Since we are fetching users we have to take whatever the user
-        auth = request.authorization
-        # Essentially we need the credentials they are passing in the headers
-
-        # Now we need to find the user in the database
-        user_find = orchard_collection.find_one({'email': auth.username})
-
-        # Now we esentially implement the error handling
-        if auth.username is not None and auth.password is not None:
-            user_find.pop('password')
-            print('The user has succesfully been fetched')
-            return(user_find, 200, None)
-        else:
-            print("The user could not be fetched")
-            return(None, 401, None)
+#
+#    @authenticated_request
+#    def get(self):
+#        # This is essentially the function that we are going to be using to fetch the users
+#
+#        # Since we are fetching users we have to take whatever the user
+#        auth = request.authorization
+#        # Essentially we need the credentials they are passing in the headers
+#
+#        # Now we need to find the user in the database
+#        user_find = orchard_collection.find_one({'email': auth.username})
+#
+#        # Now we esentially implement the error handling
+#        if auth.username is not None and auth.password is not None:
+#            user_find.pop('password')
+#            print('The user has succesfully been fetched')
+#            return(user_find, 200, None)
+#        else:
+#            print("The user could not be fetched")
+#            return(None, 401, None)
 
     def delete(self):
         # This will essentially be the function to delete users
