@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orchard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9s-HR-MjP">
-                                <rect key="frame" x="129" y="84" width="116" height="30"/>
+                                <rect key="frame" x="129" y="82" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" red="0.91511796443426752" green="1" blue="0.96295811999029768" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -63,7 +63,7 @@
                                 <color key="value" red="0.63137254901960782" green="0.76862745098039209" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                                <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="0.89094606164383561" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.72992621527777779" green="0.40000000600000002" blue="0.40000000600000002" alpha="0.650390625" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="angle">
                                 <real key="value" value="23232323"/>
@@ -274,29 +274,15 @@
         <scene sceneID="djf-PB-Bq2">
             <objects>
                 <viewController id="5HA-FT-Z3Q" customClass="SignUpViewController" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RDo-8k-tC4">
+                    <view key="view" contentMode="scaleToFill" id="RDo-8k-tC4" customClass="GradientView" customModule="OrchardClient" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxP-Re-iOm">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxP-Re-iOm" customClass="YoshikoTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="91" y="213" width="192" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yO3-Es-lll">
-                                <rect key="frame" x="91" y="264" width="192" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cjP-pA-RAC">
-                                <rect key="frame" x="91" y="318" width="192" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scb-Xb-zgG">
@@ -307,14 +293,28 @@
                                     <action selector="signUpButton:" destination="5HA-FT-Z3Q" eventType="touchUpInside" id="2SH-YW-UfZ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cjP-pA-RAC" customClass="YoshikoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="91" y="318" width="192" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="1KP-X4-4tF"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.58823529411764708" green="0.87058823529411766" blue="0.85490196078431369" alpha="0.650390625" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.16078431372549018" green="0.19607843137254902" blue="0.25783643535539214" alpha="0.36044520547945208" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="qxP-Re-iOm" id="K3x-3t-OU5"/>
                         <outlet property="passwordTextField" destination="cjP-pA-RAC" id="Pd2-5P-mds"/>
-                        <outlet property="usernameTextField" destination="yO3-Es-lll" id="sEI-QM-vja"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oaw-FJ-Shr" userLabel="First Responder" sceneMemberID="firstResponder"/>
