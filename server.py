@@ -28,9 +28,9 @@ def authenticated_request(func):
         print('***********')
         print(request.authorization)
         print('***********')
-        auth_code = request.headers.get(['authorization'])
-        email = decode(auth_code)
-        password = decode(auth_code)
+        auth_code = request.headers['authorization']
+        email,password = decode(auth_code)
+       
         if email is not None and password is not None:
             user_collection = database.orchard_collection
             user = user_collection.find_one({'email': email})
