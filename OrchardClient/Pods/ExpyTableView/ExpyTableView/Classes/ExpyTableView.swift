@@ -224,7 +224,7 @@ extension ExpyTableView: UITableViewDataSource {
 			return headerCell
 		}
 		
-		DispatchQueue.main.async { [weak self] _ in
+		DispatchQueue.main.async { [weak self]  in
 			if self?.visibleSections[indexPath.section] == true {
 				headerCellConformant.changeState(.willExpand, cellReuseStatus: true)
 				headerCellConformant.changeState(.didExpand, cellReuseStatus: true)
