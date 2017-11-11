@@ -10,4 +10,5 @@ target 'OrchardClient' do
       pod 'Zip'
       pod 'SHSearchBar'
 	pod 'TextFieldEffects'
+	pod ‘ExpyTableView’
 end

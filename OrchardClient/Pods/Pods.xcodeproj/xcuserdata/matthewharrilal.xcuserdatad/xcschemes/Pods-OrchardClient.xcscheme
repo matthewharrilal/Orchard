@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "54761A2F1316FD199DC498EB43BF0B45"
+               BlueprintIdentifier = "17B4A51DBEF0E3BD3E28E191CD98B15C"
                BuildableName = "Pods_OrchardClient.framework"
                BlueprintName = "Pods-OrchardClient"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "54761A2F1316FD199DC498EB43BF0B45"
+            BlueprintIdentifier = "17B4A51DBEF0E3BD3E28E191CD98B15C"
             BuildableName = "Pods_OrchardClient.framework"
             BlueprintName = "Pods-OrchardClient"
             ReferencedContainer = "container:Pods.xcodeproj">

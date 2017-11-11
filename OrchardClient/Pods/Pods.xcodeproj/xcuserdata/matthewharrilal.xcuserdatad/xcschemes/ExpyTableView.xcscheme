@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FF783097D06A6D7D4FF130B75EBBFBBD'
-               BlueprintName = 'SHSearchBar'
+               BlueprintIdentifier = '319A181D4896AD410E0A368098944E08'
+               BlueprintName = 'ExpyTableView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SHSearchBar.framework'>
+               BuildableName = 'ExpyTableView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
