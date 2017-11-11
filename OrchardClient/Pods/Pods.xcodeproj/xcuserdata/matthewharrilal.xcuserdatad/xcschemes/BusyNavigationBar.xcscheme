@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6868EE7C1CDAD2A9030235D4ADD497EF'
-               BlueprintName = 'Zip'
+               BlueprintIdentifier = '9582CCC8797B40EB2877B15DE274249C'
+               BlueprintName = 'BusyNavigationBar'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Zip.framework'>
+               BuildableName = 'BusyNavigationBar.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

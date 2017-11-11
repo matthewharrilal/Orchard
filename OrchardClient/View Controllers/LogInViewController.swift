@@ -55,4 +55,10 @@ class LogInViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func signUpButton(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController")
+        self.navigationController?.pushViewController(controller!, animated: true)
+    }
+    
 }

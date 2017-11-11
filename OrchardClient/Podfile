@@ -11,4 +11,5 @@ target 'OrchardClient' do
       pod 'SHSearchBar'
 	pod 'TextFieldEffects'
 	pod ‘ExpyTableView’
+	pod 'BusyNavigationBar'
 end

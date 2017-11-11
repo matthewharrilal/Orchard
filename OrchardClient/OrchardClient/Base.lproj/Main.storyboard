@@ -45,7 +45,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <segue destination="5HA-FT-Z3Q" kind="show" id="9LX-iP-4un"/>
+                                    <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FTD-hg-mP4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orchard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9s-HR-MjP">
@@ -273,7 +273,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="djf-PB-Bq2">
             <objects>
-                <viewController id="5HA-FT-Z3Q" customClass="SignUpViewController" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="5HA-FT-Z3Q" customClass="SignUpViewController" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RDo-8k-tC4" customClass="GradientView" customModule="OrchardClient" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,7 +308,7 @@
                                 <color key="value" red="0.58823529411764708" green="0.87058823529411766" blue="0.85490196078431369" alpha="0.650390625" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                                <color key="value" red="0.16078431372549018" green="0.19607843137254902" blue="0.25783643535539214" alpha="0.36044520547945208" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.72725854013480395" green="0.56010774101307192" blue="0.59830633425245106" alpha="0.58106806506849318" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>

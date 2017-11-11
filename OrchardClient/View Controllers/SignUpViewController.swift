@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import BusyNavigationBar
 
 class SignUpViewController: UIViewController {
     //    MARK: UIElements
@@ -19,6 +20,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
