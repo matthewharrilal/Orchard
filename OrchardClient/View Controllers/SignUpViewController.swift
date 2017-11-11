@@ -16,11 +16,21 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    
+    
     let networkingInstance = LogInNetworkingLayer()
     
     override func viewDidLoad() {
+        var options = BusyNavigationBarOptions()
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        options.animationType = .bars
+        options.color = .green
+        options.alpha = 1000000000
+        options.transparentMaskEnabled = true
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.start(options)
+        
     }
     
     override func didReceiveMemoryWarning() {

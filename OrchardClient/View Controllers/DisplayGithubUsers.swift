@@ -35,6 +35,7 @@ class DisplayGithubUsers: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,8 +60,8 @@ class DisplayGithubUsers: UITableViewController {
                 if let data = data {
                     DispatchQueue.main.async {
                         cell.displayUsersImageView.image = UIImage(data: data)
-                    
-//                        self.tableView.reloadData()
+                        
+                        //                        self.tableView.reloadData()
                     }
                     
                 } else {
