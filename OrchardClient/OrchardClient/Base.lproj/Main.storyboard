@@ -118,7 +118,7 @@
                     </view>
                     <connections>
                         <outlet property="findUserTextField" destination="xqq-ww-rp0" id="KIw-pV-3lG"/>
-                        <segue destination="WhU-e1-SHn" kind="show" identifier="displayGithubUser" id="1O2-Y9-EFO"/>
+                        <segue destination="WhU-e1-SHn" kind="show" identifier="displayGithubUsers" id="tFZ-7F-wyG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vy6-QS-NYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -208,7 +208,7 @@
         <!--Display Github Users-->
         <scene sceneID="OT1-Un-Dpm">
             <objects>
-                <tableViewController id="WhU-e1-SHn" customClass="DisplayGithubUsers" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="displayGithubUsers" id="WhU-e1-SHn" customClass="DisplayGithubUsers" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="f6F-ig-asd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,6 +253,7 @@
                                         <constraint firstItem="wei-Mv-L61" firstAttribute="leading" secondItem="diJ-0X-pl8" secondAttribute="trailing" constant="8" symbolic="YES" id="zEm-dk-VUS"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="displayUsersImageView" destination="diJ-0X-pl8" id="f3S-RR-MjH"/>
                                     <outlet property="userDetailedLabel" destination="kfh-zJ-rIb" id="ovg-az-jey"/>
@@ -265,6 +266,7 @@
                             <outlet property="delegate" destination="WhU-e1-SHn" id="Hvz-S4-g5U"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="kRi-JQ-abQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eko-Si-LuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

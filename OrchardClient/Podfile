@@ -12,4 +12,5 @@ target 'OrchardClient' do
 	pod 'TextFieldEffects'
 	pod ‘ExpyTableView’
 	pod 'BusyNavigationBar'
+	pod ‘SimpleAnimation’
 end

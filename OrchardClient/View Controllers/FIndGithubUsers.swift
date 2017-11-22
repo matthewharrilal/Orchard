@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SimpleAnimation
 
 class FindGithubUsers: UIViewController {
     let networkingInstance = GithubNetworkingLayer()
@@ -36,11 +37,11 @@ class FindGithubUsers: UIViewController {
              displayUsers.usernameText = user
             
         }
-        self.performSegue(withIdentifier: "displayGithubUser", sender: nil)
+        self.performSegue(withIdentifier: "displayGithubUsers", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "displayGithubUser" {
+        if segue.identifier == "displayGithubUsers" {
             let displayGithubUserTVC = segue.destination as? DisplayGithubUsers
             displayGithubUserTVC?.usernameText = findUserTextField.text!
         }

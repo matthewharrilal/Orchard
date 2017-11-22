@@ -19,7 +19,6 @@ class DisplayGithubUsers: UITableViewController {
     var usernameText = ""
     var usersArray = [GithubUser]()
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         githubNetworkInstance.network(route: .users(username: usernameText), requestRoute: .get) { (data, response) in
@@ -45,8 +44,7 @@ class DisplayGithubUsers: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersArray.count
     }
-    
-    
+   
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DisplayUsersTableViewCell

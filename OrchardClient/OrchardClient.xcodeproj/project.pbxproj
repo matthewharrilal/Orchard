@@ -16,6 +16,7 @@
 		1C20027F1FB626E600E6EA3D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C20027E1FB626E600E6EA3D /* SearchViewController.swift */; };
 		1C2002811FB626F000E6EA3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C2002801FB626F000E6EA3D /* Localizable.strings */; };
 		1C2002831FB62D5300E6EA3D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2002821FB62D5300E6EA3D /* GradientView.swift */; };
+		1C83DF221FC5FE50005758DC /* UserRepositoriesNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF211FC5FE50005758DC /* UserRepositoriesNetworkingLayer.swift */; };
 		1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F21F9C60F500553C5A /* AppDelegate.swift */; };
 		1C8DA2F51F9C60F500553C5A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */; };
 		1C8DA2F81F9C60F500553C5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F61F9C60F500553C5A /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		1CF05EB41F9F1BDF0093B8C7 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */; };
 		1CF05EB61F9F1FF70093B8C7 /* FIndGithubUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB51F9F1FF70093B8C7 /* FIndGithubUsers.swift */; };
 		1CF05EB91F9F9B250093B8C7 /* OauthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EB81F9F9B250093B8C7 /* OauthToken.swift */; };
+		38BC541F105D063D8B0E861C /* FindUserRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BC545AB343CE80F800BD0F /* FindUserRepositories.swift */; };
 		5E2F9088744B24960B513589 /* Pods_OrchardClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3D4316923DCA8E60ADF579 /* Pods_OrchardClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,7 @@
 		1C20027E1FB626E600E6EA3D /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1C2002801FB626F000E6EA3D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1C2002821FB62D5300E6EA3D /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		1C83DF211FC5FE50005758DC /* UserRepositoriesNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoriesNetworkingLayer.swift; sourceTree = "<group>"; };
 		1C8DA2EF1F9C60F500553C5A /* OrchardClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrchardClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8DA2F21F9C60F500553C5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		1CF05EB31F9F1BDF0093B8C7 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
 		1CF05EB51F9F1FF70093B8C7 /* FIndGithubUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIndGithubUsers.swift; sourceTree = "<group>"; };
 		1CF05EB81F9F9B250093B8C7 /* OauthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthToken.swift; sourceTree = "<group>"; };
+		38BC545AB343CE80F800BD0F /* FindUserRepositories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindUserRepositories.swift; sourceTree = "<group>"; };
 		AD3D4316923DCA8E60ADF579 /* Pods_OrchardClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrchardClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4575281DD01A9EC711C93D0 /* Pods-OrchardClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrchardClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrchardClient/Pods-OrchardClient.release.xcconfig"; sourceTree = "<group>"; };
 		F77725FD0749C8B351FC031A /* Pods-OrchardClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrchardClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrchardClient/Pods-OrchardClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				1C0318EF1FB0B7F5004CF2B4 /* DownloadProfileImage.swift */,
 				1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */,
 				1C8DA3091F9C732B00553C5A /* LogInNetworkingCode.swift */,
+				38BC545AB343CE80F800BD0F /* FindUserRepositories.swift */,
+				1C83DF211FC5FE50005758DC /* UserRepositoriesNetworkingLayer.swift */,
 			);
 			path = "Models-and-Networking-Layers";
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 				"${BUILT_PRODUCTS_DIR}/ExpyTableView/ExpyTableView.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SHSearchBar/SHSearchBar.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleAnimation/SimpleAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
 			);
@@ -299,6 +306,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpyTableView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SHSearchBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 			);
@@ -333,6 +341,7 @@
 				1C0318F01FB0B7F5004CF2B4 /* DownloadProfileImage.swift in Sources */,
 				1C8DA2F51F9C60F500553C5A /* LogInViewController.swift in Sources */,
 				1C20027F1FB626E600E6EA3D /* SearchViewController.swift in Sources */,
+				1C83DF221FC5FE50005758DC /* UserRepositoriesNetworkingLayer.swift in Sources */,
 				1C2002791FB4A75900E6EA3D /* DisplayUsersTableViewCell.swift in Sources */,
 				1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */,
 				1C8DA30A1F9C732B00553C5A /* LogInNetworkingCode.swift in Sources */,
@@ -347,6 +356,7 @@
 				1C8DA3061F9C6EA700553C5A /* User.swift in Sources */,
 				1C20027D1FB4AEEC00E6EA3D /* DisplayUsersCollectionViewCell.swift in Sources */,
 				1C0318F21FB0BE60004CF2B4 /* DisplayGithubUsers.swift in Sources */,
+				38BC541F105D063D8B0E861C /* FindUserRepositories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
