@@ -27,7 +27,7 @@ enum FindingUserRepositoriesRoute {
             
         // If the user chooses the user pathway the url or the pathway would be constructed in this fashiom
         case .users:
-            return "users/\(FindUsersName.username)/repos"
+            return "/users/matthewharrilal/repos"
         }
     }
     
@@ -46,15 +46,14 @@ class UserRepositoriesNetworkingLayer {
     
     // The function that takes care of our network requests handling factoras such as the different route pathways the user can take as well as the request route such as different http methods on the internet task that can be performed as well as the completion handler because the data can be returned to us at a later time
     func network(route: FindingUserRepositoriesRoute, requestRoute: DifferentHttpMethods, completionHandler: @escaping (Data) -> Void) {
-        guard let fullUrlString = URL(string: baseUrl.appending(route.path())) else{return}
-        var getRequest = URLRequest(url: fullUrlString)
+        let fullUrlString = URL(string: baseUrl.appending(route.path())) 
+        var getRequest = URLRequest(url: fullUrlString!)
         getRequest.allHTTPHeaderFields = route.urlHeaders()
         session.dataTask(with: getRequest) { (data, response, error) in
             if let data = data {
                 completionHandler(data)
             }
             }.resume()
-        
     }
 }
 

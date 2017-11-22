@@ -14,10 +14,12 @@ class DisplayGithubUsers: UITableViewController {
     
     let githubNetworkInstance = GithubNetworkingLayer()
     let downloadProfileImageInstance = DownloadProfileImage()
+    let networkingInstance = UserRepositoriesNetworkingLayer()
     
     
     var usernameText = ""
     var usersArray = [GithubUser]()
+    var repositoryArray = [UserGithubRepositories]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -35,6 +37,7 @@ class DisplayGithubUsers: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
+        decodeRepository()
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,5 +74,9 @@ class DisplayGithubUsers: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
     }
 }
