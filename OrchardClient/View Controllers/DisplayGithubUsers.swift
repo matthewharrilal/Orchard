@@ -19,10 +19,17 @@ class DisplayGithubUsers: UITableViewController {
     
     var usernameText = ""
     var usersArray = [GithubUser]()
-    var repositoryArray = [UserGithubRepositories]()
+    var repositoryArray = [UserGithubRepositories]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+      
         githubNetworkInstance.network(route: .users(username: usernameText), requestRoute: .get) { (data, response) in
             print(self.usernameText)
             let user = try? JSONDecoder().decode(GithubUserArray.self, from: data)
@@ -32,12 +39,12 @@ class DisplayGithubUsers: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
-        decodeRepository()
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,7 +54,7 @@ class DisplayGithubUsers: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersArray.count
     }
-   
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DisplayUsersTableViewCell
@@ -77,6 +84,25 @@ class DisplayGithubUsers: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DisplayUsersTableViewCell
+//        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+//        let displayRepositoryTVC = storyboard.instantiateViewController(withIdentifier: "UserRepositories") as! DisplayUserRepositories
+        let user = usersArray[indexPath.row]
+//        displayRepositoryTVC.usernameText = user.login!
+        FindUsersName.username = cell.userLoginLabel.text!
+        let userRepostioryNetworkingLayer = UserRepositoriesNetworkingLayer()
+        
+        userRepostioryNetworkingLayer.network(route: .users(), requestRoute: .get) { (data) in
+            let repos = try? JSONDecoder().decode([UserGithubRepositories].self, from: data)
+            
+            self.repositoryArray = repos!
+            print(repos)
+        }
+
+        print(user.login)
+//        self.performSegue(withIdentifier: "displayUserRepositories", sender: nil)
+        
     }
+    
+    
 }

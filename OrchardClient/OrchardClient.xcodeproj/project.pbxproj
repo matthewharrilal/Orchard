@@ -18,6 +18,7 @@
 		1C2002831FB62D5300E6EA3D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2002821FB62D5300E6EA3D /* GradientView.swift */; };
 		1C83DF221FC5FE50005758DC /* UserRepositoriesNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF211FC5FE50005758DC /* UserRepositoriesNetworkingLayer.swift */; };
 		1C83DF241FC60699005758DC /* FunctionCallers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF231FC60699005758DC /* FunctionCallers.swift */; };
+		1C83DF261FC63800005758DC /* DisplayUserRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF251FC63800005758DC /* DisplayUserRepositories.swift */; };
 		1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F21F9C60F500553C5A /* AppDelegate.swift */; };
 		1C8DA2F51F9C60F500553C5A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */; };
 		1C8DA2F81F9C60F500553C5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8DA2F61F9C60F500553C5A /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		1C2002821FB62D5300E6EA3D /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1C83DF211FC5FE50005758DC /* UserRepositoriesNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoriesNetworkingLayer.swift; sourceTree = "<group>"; };
 		1C83DF231FC60699005758DC /* FunctionCallers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionCallers.swift; sourceTree = "<group>"; };
+		1C83DF251FC63800005758DC /* DisplayUserRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayUserRepositories.swift; sourceTree = "<group>"; };
 		1C8DA2EF1F9C60F500553C5A /* OrchardClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrchardClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8DA2F21F9C60F500553C5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8DA2F41F9C60F500553C5A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				1C0318F11FB0BE60004CF2B4 /* DisplayGithubUsers.swift */,
 				1C20027A1FB4AAA000E6EA3D /* DisplayGithubUserCollectionView.swift */,
 				1C2002821FB62D5300E6EA3D /* GradientView.swift */,
+				1C83DF251FC63800005758DC /* DisplayUserRepositories.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				1C20027B1FB4AAA000E6EA3D /* DisplayGithubUserCollectionView.swift in Sources */,
 				1C8DA30C1F9D5FCB00553C5A /* Alerts.swift in Sources */,
 				1C83DF241FC60699005758DC /* FunctionCallers.swift in Sources */,
+				1C83DF261FC63800005758DC /* DisplayUserRepositories.swift in Sources */,
 				1C8DA3061F9C6EA700553C5A /* User.swift in Sources */,
 				1C20027D1FB4AEEC00E6EA3D /* DisplayUsersCollectionViewCell.swift in Sources */,
 				1C0318F21FB0BE60004CF2B4 /* DisplayGithubUsers.swift in Sources */,

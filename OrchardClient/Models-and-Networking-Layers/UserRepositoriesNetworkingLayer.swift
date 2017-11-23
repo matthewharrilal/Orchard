@@ -27,7 +27,7 @@ enum FindingUserRepositoriesRoute {
             
         // If the user chooses the user pathway the url or the pathway would be constructed in this fashiom
         case .users:
-            return "/users/matthewharrilal/repos"
+            return "/users/\(FindUsersName.username)/repos"
         }
     }
     
