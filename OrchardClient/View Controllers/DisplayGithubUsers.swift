@@ -90,14 +90,8 @@ class DisplayGithubUsers: UITableViewController {
         let user = usersArray[indexPath.row]
 //        displayRepositoryTVC.usernameText = user.login!
         FindUsersName.username = user.login!
-        let userRepostioryNetworkingLayer = UserRepositoriesNetworkingLayer()
-        
-        userRepostioryNetworkingLayer.network(route: .users(), requestRoute: .get) { (data) in
-            let repos = try? JSONDecoder().decode([UserGithubRepositories].self, from: data)
-            
-            self.repositoryArray = repos!
-            print(repos)
-        }
+    
+        decodeRepository()
 
         print(user.login)
 //        self.performSegue(withIdentifier: "displayUserRepositories", sender: nil)
