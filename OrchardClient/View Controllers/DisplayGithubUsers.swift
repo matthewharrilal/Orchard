@@ -89,7 +89,7 @@ class DisplayGithubUsers: UITableViewController {
 //        let displayRepositoryTVC = storyboard.instantiateViewController(withIdentifier: "UserRepositories") as! DisplayUserRepositories
         let user = usersArray[indexPath.row]
 //        displayRepositoryTVC.usernameText = user.login!
-        FindUsersName.username = cell.userLoginLabel.text!
+        FindUsersName.username = user.login!
         let userRepostioryNetworkingLayer = UserRepositoriesNetworkingLayer()
         
         userRepostioryNetworkingLayer.network(route: .users(), requestRoute: .get) { (data) in
