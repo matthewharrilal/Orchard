@@ -12,13 +12,7 @@ import UIKit
 class DisplayUserRepositories: UITableViewController {
     var usernameText = ""
     
-    var repositories1 = [UserGithubRepositories]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+    var repositories1 = [UserGithubRepositories]()
     
     let userRepositoriesInstance = UserRepositoriesNetworkingLayer()
     
@@ -28,19 +22,24 @@ class DisplayUserRepositories: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        print("This is the username text when displaying the repos \(self.usernameText)")
+       
         FindUsersName.username = self.usernameText
         userRepositoriesInstance.network(route: .users(), requestRoute: .get) { (data) in
             
-            guard let repos = try? JSONDecoder().decode([UserGithubRepositories].self, from: data) else {return}
+             let repos = try? JSONDecoder().decode([UserGithubRepositories].self, from: data)
+            self.repositories1 = repos!
             print("These are the repos \(repos)")
-            self.repositories1 = repos
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
       
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("This is the repos1 \(repositories1)")
         
     }
     
@@ -48,7 +47,9 @@ class DisplayUserRepositories: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+  
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repositories1.count
     }
     
