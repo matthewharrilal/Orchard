@@ -27,6 +27,7 @@ enum FindingUserRepositoriesRoute {
             
         // If the user chooses the user pathway the url or the pathway would be constructed in this fashiom
         case .users:
+            print("This is the concatenated part \(FindUsersName.username)")
             return "/users/\(FindUsersName.username)/repos"
         }
     }

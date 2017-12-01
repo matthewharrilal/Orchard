@@ -15,6 +15,7 @@ class DisplayGithubUsers: UITableViewController {
     let githubNetworkInstance = GithubNetworkingLayer()
     let downloadProfileImageInstance = DownloadProfileImage()
     let networkingInstance = UserRepositoriesNetworkingLayer()
+//    let reposInstance = DisplayUserRepositories()
     
     
     var usernameText = ""
@@ -60,6 +61,7 @@ class DisplayGithubUsers: UITableViewController {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DisplayUsersTableViewCell
         let user = usersArray[indexPath.row]
         cell.userLoginLabel.text = user.login
+        self.usernameText = user.login!
         cell.detailTextLabel?.text = user.avatarUrl
         cell.displayUsersImageView.contentMode = .scaleAspectFit
         let url = URL(string: user.avatarUrl!)
@@ -84,18 +86,26 @@ class DisplayGithubUsers: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DisplayUsersTableViewCell
-//        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-//        let displayRepositoryTVC = storyboard.instantiateViewController(withIdentifier: "UserRepositories") as! DisplayUserRepositories
-        let user = usersArray[indexPath.row]
-//        displayRepositoryTVC.usernameText = user.login!
-        FindUsersName.username = user.login!
-    
-        decodeRepository()
-
-        print(user.login)
-//        self.performSegue(withIdentifier: "displayUserRepositories", sender: nil)
+//        guard let indexPath = tableView.indexPathForSelectedRow else{return}
+//         let currentCell = tableView.cellForRow(at: indexPath) as! DisplayUsersTableViewCell
+//        print("This is the current cells text label \(currentCell.userLoginLabel.text!)")
+//        let reposInstance = DisplayUserRepositories()
+//        reposInstance.usernameText = currentCell.userLoginLabel.text!
+//        print("This is the repos instance username text \(reposInstance.usernameText)")
+        self.performSegue(withIdentifier: "displayUserRepositories", sender: nil)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else {return}
+        let currentCell = tableView.cellForRow(at: indexPath) as! DisplayUsersTableViewCell
+        
+        if let identifier = segue.identifier {
+            if identifier == "displayUserRepositories" {
+                let repos = segue.destination as? DisplayUserRepositories
+                repos?.usernameText = currentCell.userLoginLabel.text!
+            }
+        }
     }
     
     

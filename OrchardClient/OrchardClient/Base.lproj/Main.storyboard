@@ -267,6 +267,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="kRi-JQ-abQ"/>
+                    <connections>
+                        <segue destination="DDO-oc-76s" kind="show" identifier="displayUserRepositories" id="EyQ-LT-29v"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eko-Si-LuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -298,7 +301,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJ8-ZM-Vki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2882" y="38"/>
+            <point key="canvasLocation" x="3066" y="150"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="djf-PB-Bq2">

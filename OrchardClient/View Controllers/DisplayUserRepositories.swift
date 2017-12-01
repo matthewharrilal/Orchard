@@ -12,18 +12,36 @@ import UIKit
 class DisplayUserRepositories: UITableViewController {
     var usernameText = ""
     
-    var repositories1 = [UserGithubRepositories]()
+    var repositories1 = [UserGithubRepositories]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    let userRepositoriesInstance = UserRepositoriesNetworkingLayer()
+    
+    var displayInstance = DisplayGithubUsers()
     
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        FindUsersName.username = usernameText
-        print("This is the usernameText \(usernameText)")
+        print("This is the username text when displaying the repos \(self.usernameText)")
+        FindUsersName.username = self.usernameText
+        userRepositoriesInstance.network(route: .users(), requestRoute: .get) { (data) in
+            
+            guard let repos = try? JSONDecoder().decode([UserGithubRepositories].self, from: data) else {return}
+            print("These are the repos \(repos)")
+            self.repositories1 = repos
+        }
+      
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("This is the repositories1 \(repositories1)")
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,7 +56,7 @@ class DisplayUserRepositories: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let repos = repositories1[indexPath.row]
         cell.textLabel?.text = repos.name
-        self.tableView.reloadData()
+
         return cell
     }
 }
