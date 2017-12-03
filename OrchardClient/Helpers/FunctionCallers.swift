@@ -12,6 +12,7 @@ import UIKit
 let userRepostioryNetworkingLayer = UserRepositoriesNetworkingLayer()
 let displayUsersInstance = DisplayGithubUsers()
 
+
 func decodeRepository(){
     userRepostioryNetworkingLayer.network(route: .users(), requestRoute: .get) { (data) in
         guard let repos = try? JSONDecoder().decode([UserGithubRepositories].self, from: data) else {return}
@@ -22,6 +23,7 @@ func decodeRepository(){
     
     }
 }
+
 
 
 

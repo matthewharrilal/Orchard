@@ -15,10 +15,10 @@ class DisplayGithubUsers: UITableViewController {
     let githubNetworkInstance = GithubNetworkingLayer()
     let downloadProfileImageInstance = DownloadProfileImage()
     let networkingInstance = UserRepositoriesNetworkingLayer()
-//    let reposInstance = DisplayUserRepositories()
     
     
     var usernameText = ""
+    var usernameText1 = ""
     var usersArray = [GithubUser]()
     var repositoryArray = [UserGithubRepositories]() {
         didSet {
@@ -70,10 +70,7 @@ class DisplayGithubUsers: UITableViewController {
                 if let data = data {
                     DispatchQueue.main.async {
                         cell.displayUsersImageView.image = UIImage(data: data)
-                        
-                        //                        self.tableView.reloadData()
                     }
-                    
                 } else {
                     DispatchQueue.main.async {
                         cell.imageView?.image = UIImage(named: "noImage.png")
@@ -81,19 +78,13 @@ class DisplayGithubUsers: UITableViewController {
                 }
             }).resume()
         }
-        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let indexPath = tableView.indexPathForSelectedRow else{return}
-//         let currentCell = tableView.cellForRow(at: indexPath) as! DisplayUsersTableViewCell
-//        print("This is the current cells text label \(currentCell.userLoginLabel.text!)")
-//        let reposInstance = DisplayUserRepositories()
-//        reposInstance.usernameText = currentCell.userLoginLabel.text!
-//        print("This is the repos instance username text \(reposInstance.usernameText)")
+        let users = usersArray[indexPath.row]
+        RepositoryName.username = users.login!
         self.performSegue(withIdentifier: "displayUserRepositories", sender: nil)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -104,9 +95,8 @@ class DisplayGithubUsers: UITableViewController {
             if identifier == "displayUserRepositories" {
                 let repos = segue.destination as? DisplayUserRepositories
                 repos?.usernameText = currentCell.userLoginLabel.text!
+                repos?.usernameText1 = currentCell.userLoginLabel.text!
             }
         }
     }
-    
-    
 }
