@@ -18,6 +18,9 @@ class DisplayUserRepositories: UITableViewController {
     
     var displayInstance = DisplayGithubUsers()
     
+    func swipeToLogin() {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,14 +43,15 @@ class DisplayUserRepositories: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("This is the repos1 \(repositories1)")
-        
     }
     
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
   
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repositories1.count

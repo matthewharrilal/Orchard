@@ -74,7 +74,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="ch3-Od-9Wi" id="MzX-I8-gID"/>
                         <outlet property="passwordTextField" destination="oLj-fg-bql" id="qkn-lg-QNg"/>
-                        <segue destination="Mfy-ub-bp2" kind="show" identifier="showUsers" id="lW6-bp-35r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,6 +115,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="T4W-hy-cif"/>
                     </view>
+                    <navigationItem key="navigationItem" id="KYZ-o5-ed1"/>
                     <connections>
                         <outlet property="findUserTextField" destination="xqq-ww-rp0" id="KIw-pV-3lG"/>
                         <segue destination="WhU-e1-SHn" kind="show" identifier="displayGithubUsers" id="tFZ-7F-wyG"/>
@@ -123,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vy6-QS-NYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1293.5999999999999" y="143.47826086956522"/>
+            <point key="canvasLocation" x="1632.8" y="143.47826086956522"/>
         </scene>
         <!--Display Github User Collection View-->
         <scene sceneID="8bq-dN-iSA">
@@ -273,7 +273,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eko-Si-LuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2210" y="150"/>
+            <point key="canvasLocation" x="2548" y="149.77511244377811"/>
         </scene>
         <!--Display User Repositories-->
         <scene sceneID="uU1-6F-aWq">
@@ -301,7 +301,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJ8-ZM-Vki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3066" y="150"/>
+            <point key="canvasLocation" x="3404" y="149.77511244377811"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="djf-PB-Bq2">
