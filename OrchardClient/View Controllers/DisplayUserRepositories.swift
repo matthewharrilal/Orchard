@@ -72,6 +72,7 @@ class DisplayUserRepositories: UITableViewController {
         networking.network(route: .user(), requestRoute: .get) { (data) in
             let commits = try? JSONDecoder().decode([Commits].self, from: data)
             print("These are the commits \(commits)")
+            print("And these are the specific speciifcations for the users as well as the justification for what the user does on his spare time")
         }
     }
 }
