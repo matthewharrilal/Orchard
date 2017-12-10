@@ -70,10 +70,8 @@ class DisplayUserRepositories: UITableViewController {
         RepositoryName.repositoryName = userReposName
         let networking = GithubCommitsNetworkingLayer()
         networking.network(route: .user(), requestRoute: .get) { (data) in
-            guard let commits = try? JSONDecoder().decode([Commits].self, from: data) else {return}
-            for message in commits {
-                print(message.date)
-            }
+         let commits = try? JSONDecoder().decode(Commits.self, from: data) 
+            print(commits)
         }
     }
 }

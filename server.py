@@ -30,11 +30,14 @@ def authenticated_request(func):
         print('***********')
         auth_code = request.headers['authorization']
         email,password = decode(auth_code)
-       
+        # pdb.set_trace()
+
         if email is not None and password is not None:
             user_collection = database.orchard_collection
             user = user_collection.find_one({'email': email})
+            # pdb.set_trace()
             if user is not None:
+                # pdb.set_trace()
                 encoded_password = password.encode('utf-8')
                 if bcrypt.checkpw(encoded_password, user['password']):
                     return func(*args, **kwargs)
@@ -71,7 +74,7 @@ class User(Resource):
             return(None, 404, None)
 
 
-#    @authenticated_request
+    @authenticated_request
     def get(self):
         # This is essentially the function that we are going to be using to fetch the users
 
@@ -80,7 +83,8 @@ class User(Resource):
         # Essentially we need the credentials they are passing in the headers
 
         # Now we need to find the user in the database
-        user_find = orchard_collection.find_one({'email': "larry@gmail.com"})
+        # pdb.set_trace()
+        user_find = orchard_collection.find_one({'email': auth.username})
 
         # Now we esentially implement the error handling
         if user_find is not None:

@@ -22,8 +22,8 @@ enum CommitRoutes {
     func path() -> String {
         switch self {
         case .user:
-            print("The username text from the display Instance is \(RepositoryName.username), \(RepositoryName.repositoryName)")
-            return "/repos/\(RepositoryName.username)/\(RepositoryName.repositoryName)/commits"
+            print("/repos/\(RepositoryName.username)/\(RepositoryName.repositoryName)/stats/commit_activity")
+            return "/repos/\(RepositoryName.username)/\(RepositoryName.repositoryName)/stats/commit_activity"
         }
     }
     

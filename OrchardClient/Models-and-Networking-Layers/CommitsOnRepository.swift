@@ -11,41 +11,53 @@ import UIKit
 
 
 struct Commits {
-    let name: String?
-    let message: String?
-    let date: String?
-    init(name: String?, message: String?, date: String?) {
-        self.message = message
-        self.date = date
-        self.name = name
+    var total: Int?
+    var week: Int?
+    init(total: Int?, week: Int?) {
+        self.total = total
+        self.week = week
     }
 }
-
 
 extension Commits: Decodable {
-    enum FirstLayerKey: String, CodingKey {
-        case commit
+    enum FirstLayerKeys: String, CodingKey {
+        case total
+        case week
     }
-    
-    enum SecondLayerKey: String, CodingKey {
-        case author
-        case message
-    }
-    
-   
-    
-    enum AdditionalKeys: String, CodingKey {
-        case name
-        case date
-    }
-    
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: FirstLayerKey.self)
-        let authorContainer = try container.nestedContainer(keyedBy: SecondLayerKey.self, forKey: .commit)
-        let message = try authorContainer.decodeIfPresent(String.self, forKey: .message)
-        let authorContainer1 = try authorContainer.nestedContainer(keyedBy: AdditionalKeys.self, forKey: .author)
-        let name = try authorContainer1.decodeIfPresent(String.self, forKey: .name)
-        let date = try authorContainer1.decodeIfPresent(String.self, forKey: .date)
-        self.init(name: name, message: message, date: date)
+        let container = try decoder.container(keyedBy: FirstLayerKeys.self)
+        let total = try container.decodeIfPresent(Int.self, forKey: .total)
+        let week = try container.decodeIfPresent(Int.self, forKey: .week)
+        self.init(total: total, week: week)
     }
 }
+
+
+//extension Commits: Decodable {
+//    enum FirstLayerKey: String, CodingKey {
+//        case commit
+//    }
+//
+//    enum SecondLayerKey: String, CodingKey {
+//        case author
+//        case message
+//    }
+//
+//
+//
+//    enum AdditionalKeys: String, CodingKey {
+//        case name
+//        case date
+//    }
+//
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: FirstLayerKey.self)
+//        let authorContainer = try container.nestedContainer(keyedBy: SecondLayerKey.self, forKey: .commit)
+//        let message = try authorContainer.decodeIfPresent(String.self, forKey: .message)
+//        let authorContainer1 = try authorContainer.nestedContainer(keyedBy: AdditionalKeys.self, forKey: .author)
+//        let name = try authorContainer1.decodeIfPresent(String.self, forKey: .name)
+//        let date = try authorContainer1.decodeIfPresent(String.self, forKey: .date)
+//        self.init(name: name, message: message, date: date)
+//    }
+//}
+
