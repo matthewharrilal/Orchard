@@ -28,11 +28,11 @@ class DisplayUserRepositories: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-       
+        
         FindUsersName.username = self.usernameText
         userRepositoriesInstance.network(route: .users(), requestRoute: .get) { (data) in
             
-             let repos = try? JSONDecoder().decode([UserGithubRepositories].self, from: data)
+            let repos = try? JSONDecoder().decode([UserGithubRepositories].self, from: data)
             self.repositories1 = repos!
             print("These are the repos \(self.repositories1)")
             
@@ -40,14 +40,14 @@ class DisplayUserRepositories: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-      
+        
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-  
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -66,13 +66,32 @@ class DisplayUserRepositories: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let userRepo = repositories1[indexPath.row]
+//        guard let userReposName = userRepo.name else {return}
+//        RepositoryName.repositoryName = userReposName
+//        let networking = GithubCommitsNetworkingLayer()
+//        networking.network(route: .user(), requestRoute: .get) { (data) in
+//            guard let commits = try? JSONDecoder().decode(Commits.self, from: data) else{return}
+//            
+//        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else {return}
         let userRepo = repositories1[indexPath.row]
         guard let userReposName = userRepo.name else {return}
         RepositoryName.repositoryName = userReposName
-        let networking = GithubCommitsNetworkingLayer()
-            networking.network(route: .user(), requestRoute: .get) { (data) in
-                guard let commits = try? JSONDecoder().decode(Commits.self, from: data) else{return}
-                self.commitsArray = commits.all!
+        if let identifier = segue.identifier {
+            if identifier == "graphUserCommits" {
+                let graphVC = segue.destination as! GraphViewController
+                let networking = GithubCommitsNetworkingLayer()
+                networking.network(route: .user(), requestRoute: .get, completionHandler: { (data) in
+                    guard let commits = try? JSONDecoder().decode(Commits.self, from: data)
+                        else {return}
+                    graphVC.commitArray = commits.all!
+                    print(graphVC.commitArray)
+                })
+            }
         }
     }
 }

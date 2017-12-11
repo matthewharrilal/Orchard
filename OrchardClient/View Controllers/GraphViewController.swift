@@ -20,7 +20,7 @@ class GraphViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("THis is the commit array \(commitArray)")
       
         for i in commitArray {
             let value = ChartDataEntry(x: Double(i), y: Double(i))
