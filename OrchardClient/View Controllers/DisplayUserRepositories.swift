@@ -73,8 +73,7 @@ class DisplayUserRepositories: UITableViewController {
         let networking = GithubCommitsNetworkingLayer()
         networking.network(route: .user(), requestRoute: .get) { (data) in
             guard let commits = try? JSONDecoder().decode(Commits.self, from: data) else {return}
-            self.commitsArray = commits.all!
-            print(self.commitsArray)
+            print(commits)
         }
     }
 }
