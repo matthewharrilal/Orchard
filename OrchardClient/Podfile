@@ -13,4 +13,5 @@ target 'OrchardClient' do
 	pod ‘ExpyTableView’
 	pod 'BusyNavigationBar'
 	pod ‘SimpleAnimation’
+	 pod 'Charts', '~> 3.0'
 end

@@ -30,6 +30,7 @@
 		1C8DA3081F9C6F4400553C5A /* BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA3071F9C6F4400553C5A /* BasicAuth.swift */; };
 		1C8DA30A1F9C732B00553C5A /* LogInNetworkingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA3091F9C732B00553C5A /* LogInNetworkingCode.swift */; };
 		1C8DA30C1F9D5FCB00553C5A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8DA30B1F9D5FCB00553C5A /* Alerts.swift */; };
+		1C8FB4FC1FDE12FC00BD7C3F /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8FB4FB1FDE12FC00BD7C3F /* GraphViewController.swift */; };
 		1CA523E61FA2E76D00E792A8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA523E51FA2E76D00E792A8 /* SignUpViewController.swift */; };
 		1CEE8E831FDCFD33000FF917 /* TableViewAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE8E821FDCFD33000FF917 /* TableViewAbstraction.swift */; };
 		1CF05EB01F9F18B70093B8C7 /* GithubNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */; };
@@ -66,6 +67,7 @@
 		1C8DA3071F9C6F4400553C5A /* BasicAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAuth.swift; sourceTree = "<group>"; };
 		1C8DA3091F9C732B00553C5A /* LogInNetworkingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInNetworkingCode.swift; sourceTree = "<group>"; };
 		1C8DA30B1F9D5FCB00553C5A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		1C8FB4FB1FDE12FC00BD7C3F /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		1CA523E51FA2E76D00E792A8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1CEE8E821FDCFD33000FF917 /* TableViewAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAbstraction.swift; sourceTree = "<group>"; };
 		1CF05EAF1F9F18B70093B8C7 /* GithubNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetworkingLayer.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				1C20027A1FB4AAA000E6EA3D /* DisplayGithubUserCollectionView.swift */,
 				1C2002821FB62D5300E6EA3D /* GradientView.swift */,
 				1C83DF251FC63800005758DC /* DisplayUserRepositories.swift */,
+				1C8FB4FB1FDE12FC00BD7C3F /* GraphViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OrchardClient/Pods-OrchardClient-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BusyNavigationBar/BusyNavigationBar.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/ExpyTableView/ExpyTableView.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SHSearchBar/SHSearchBar.framework",
@@ -318,6 +322,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BusyNavigationBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpyTableView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SHSearchBar.framework",
@@ -359,6 +364,7 @@
 				1C83DF221FC5FE50005758DC /* UserRepositoriesNetworkingLayer.swift in Sources */,
 				1C2002791FB4A75900E6EA3D /* DisplayUsersTableViewCell.swift in Sources */,
 				1C8DA2F31F9C60F500553C5A /* AppDelegate.swift in Sources */,
+				1C8FB4FC1FDE12FC00BD7C3F /* GraphViewController.swift in Sources */,
 				1CEE8E831FDCFD33000FF917 /* TableViewAbstraction.swift in Sources */,
 				1C8DA30A1F9C732B00553C5A /* LogInNetworkingCode.swift in Sources */,
 				1C8DA3081F9C6F4400553C5A /* BasicAuth.swift in Sources */,
