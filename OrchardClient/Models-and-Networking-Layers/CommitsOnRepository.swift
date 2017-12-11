@@ -11,24 +11,24 @@ import UIKit
 
 
 struct Commits {
-    var total: Int?
-    var week: Int?
-    init(total: Int?, week: Int?) {
-        self.total = total
-        self.week = week
+    var owner: [Int]?
+    var all: [Int]?
+    init(owner: [Int]?, all: [Int]?) {
+        self.owner = owner
+        self.all = all
     }
 }
 
 extension Commits: Decodable {
     enum FirstLayerKeys: String, CodingKey {
-        case total
-        case week
+        case owner
+        case all
     }
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: FirstLayerKeys.self)
-        let total = try container.decodeIfPresent(Int.self, forKey: .total)
-        let week = try container.decodeIfPresent(Int.self, forKey: .week)
-        self.init(total: total, week: week)
+        let owner = try container.decodeIfPresent([Int].self, forKey: .owner)
+        let all = try container.decodeIfPresent([Int].self, forKey: .all)
+        self.init(owner: owner, all: all)
     }
 }
 
