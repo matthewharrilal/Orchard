@@ -103,14 +103,6 @@
                                     <action selector="findUserButton:" destination="Mfy-ub-bp2" eventType="touchUpInside" id="eDX-Rw-C1Z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgd-g3-2FK">
-                                <rect key="frame" x="164" y="500" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="cxS-KL-Tvl" kind="show" id="plZ-mv-ldW"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="T4W-hy-cif"/>
@@ -193,7 +185,7 @@
         <!--Graph View Controller-->
         <scene sceneID="h0R-Qn-kbJ">
             <objects>
-                <viewController id="cxS-KL-Tvl" customClass="GraphViewController" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GraphViewController" id="cxS-KL-Tvl" customClass="GraphViewController" customModule="OrchardClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e8M-dn-VMx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3r-Xb-9WY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2124" y="-512.29385307346331"/>
+            <point key="canvasLocation" x="2740" y="-609"/>
         </scene>
         <!--Display Github Users-->
         <scene sceneID="OT1-Un-Dpm">
@@ -301,9 +293,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="cxS-KL-Tvl" kind="show" id="oWg-fR-q0V"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -386,7 +375,4 @@
             <point key="canvasLocation" x="-258" y="134"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="oWg-fR-q0V"/>
-    </inferredMetricsTieBreakers>
 </document>

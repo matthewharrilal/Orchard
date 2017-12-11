@@ -34,7 +34,7 @@ class DisplayUserRepositories: UITableViewController {
             
              let repos = try? JSONDecoder().decode([UserGithubRepositories].self, from: data)
             self.repositories1 = repos!
-            print("These are the repos \(repos)")
+            print("These are the repos \(self.repositories1)")
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -45,7 +45,6 @@ class DisplayUserRepositories: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("This is the repos1 \(repositories1)")
     }
     
   
@@ -71,9 +70,9 @@ class DisplayUserRepositories: UITableViewController {
         guard let userReposName = userRepo.name else {return}
         RepositoryName.repositoryName = userReposName
         let networking = GithubCommitsNetworkingLayer()
-        networking.network(route: .user(), requestRoute: .get) { (data) in
-            guard let commits = try? JSONDecoder().decode(Commits.self, from: data) else {return}
-            print(commits)
+            networking.network(route: .user(), requestRoute: .get) { (data) in
+                guard let commits = try? JSONDecoder().decode(Commits.self, from: data) else{return}
+                self.commitsArray = commits.all!
         }
     }
 }

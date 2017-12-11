@@ -14,12 +14,15 @@ class GraphViewController: UIViewController {
     
     let data = LineChartData()
     
+    var commitArray = [Int]()
+    
     @IBOutlet weak var chartView: LineChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 0 ... 20 {
+      
+        for i in commitArray {
             let value = ChartDataEntry(x: Double(i), y: Double(i))
             lineChart.append(value)
         }
