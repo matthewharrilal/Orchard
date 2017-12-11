@@ -24,20 +24,16 @@ orchard_collection = database.orchard_collection
 def authenticated_request(func):
     def wrapper(*args, **kwargs):
         auth = request.authorization
-        # pdb.set_trace()
         print('***********')
         print(request.authorization)
         print('***********')
         auth_code = request.headers['authorization']
         email,password = decode(auth_code)
-        # pdb.set_trace()
 
         if email is not None and password is not None:
             user_collection = database.orchard_collection
             user = user_collection.find_one({'email': email})
-            # pdb.set_trace()
             if user is not None:
-                # pdb.set_trace()
                 encoded_password = password.encode('utf-8')
                 if bcrypt.checkpw(encoded_password, user['password']):
                     return func(*args, **kwargs)

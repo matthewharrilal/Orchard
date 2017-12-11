@@ -22,8 +22,8 @@ enum CommitRoutes {
     func path() -> String {
         switch self {
         case .user:
-            print("/repos/\(RepositoryName.username)/\(RepositoryName.repositoryName)/stats/commit_activity")
-            return "/repos/\(RepositoryName.username)/\(RepositoryName.repositoryName)/stats/commit_activity"
+            print("/repos/\(RepositoryName.username)/\(RepositoryName.repositoryName)/stats/participation")
+            return "/repos/\(RepositoryName.username)/\(RepositoryName.repositoryName)/stats/participation"
         }
     }
     
