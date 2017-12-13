@@ -16,11 +16,24 @@ class GraphViewController: UIViewController {
     
     var commitArray = [Int]()
     
+    var userRepoName: String?
+    
     @IBOutlet weak var chartView: LineChartView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let githubCommits = GithubCommitsNetworkingLayer()
+        RepositoryName.repositoryName = self.userRepoName!
+        githubCommits.network(route: .user(), requestRoute: .get) { (data) in
+            guard let commits = try? JSONDecoder().decode(Commits.self, from: data) else {return}
+            print(commits)
+            self.commitArray = commits.all!
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("THis is the commit array \(commitArray)")
+        print("This is the commit array \(commitArray)")
       
         for i in commitArray {
             let value = ChartDataEntry(x: Double(i), y: Double(i))

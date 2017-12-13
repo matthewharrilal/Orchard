@@ -65,32 +65,14 @@ class DisplayUserRepositories: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let userRepo = repositories1[indexPath.row]
-//        guard let userReposName = userRepo.name else {return}
-//        RepositoryName.repositoryName = userReposName
-//        let networking = GithubCommitsNetworkingLayer()
-//        networking.network(route: .user(), requestRoute: .get) { (data) in
-//            guard let commits = try? JSONDecoder().decode(Commits.self, from: data) else{return}
-//            
-//        }
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = tableView.indexPathForSelectedRow else {return}
-        let userRepo = repositories1[indexPath.row]
-        guard let userReposName = userRepo.name else {return}
-        RepositoryName.repositoryName = userReposName
         if let identifier = segue.identifier {
             if identifier == "graphUserCommits" {
-                let graphVC = segue.destination as! GraphViewController
-                let networking = GithubCommitsNetworkingLayer()
-                networking.network(route: .user(), requestRoute: .get, completionHandler: { (data) in
-                    guard let commits = try? JSONDecoder().decode(Commits.self, from: data)
-                        else {return}
-                    graphVC.commitArray = commits.all!
-                    print(graphVC.commitArray)
-                })
+                let graphViewControllerVC = segue.destination as! GraphViewController
+                guard let indexPath = tableView.indexPathForSelectedRow else {return}
+                let userRepo = self.repositories1[indexPath.row]
+                graphViewControllerVC.userRepoName = userRepo.name
+                
             }
         }
     }
